@@ -57,10 +57,7 @@ font-size:18px;			border-bottom:1px solid lightcoral; /* modello macchina */
     width: 100%;
   }
 
-	@media (max-width: 768px) {
-  .cards {
-    width: 100%;
-  }
+
 
 		
 /* TITOLI */
