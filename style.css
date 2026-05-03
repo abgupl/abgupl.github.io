@@ -44,15 +44,7 @@ font-size:18px;			border-bottom:1px solid lightcoral; /* modello macchina */
 }
 
 
-::selection {
-  background: white;
-  color: black;
-}
 
-::-webkit-selection {
-  background: white;
-  color: black;
-}
 
 
 /* CONTENITORE GENERALE CENTRATO */
@@ -128,6 +120,10 @@ h1 {
   -moz-appearance: none;
 
 font-style:bold;
+color: black;
+background-color: white;
+
+
 
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='black' d='M5 7l5 5 5-5z'/></svg>");
   background-repeat: no-repeat;
