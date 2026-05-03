@@ -63,7 +63,7 @@ font-size:18px;			border-bottom:1px solid lightcoral; /* modello macchina */
 @media (max-width: 1024px) {
   .container {
     width: 95%;
-    font-size:18px;
+    
     
     display:flex;
     flex-direction: column;
