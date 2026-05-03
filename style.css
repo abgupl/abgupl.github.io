@@ -43,14 +43,24 @@ font-size:18px;			border-bottom:1px solid lightcoral; /* modello macchina */
   height: auto;
 }
 
+
+::selection {
+  background: white;
+  color: black;
+}
+
+::-webkit-selection {
+  background: white;
+  color: black;
+}
+
+
 /* CONTENITORE GENERALE CENTRATO */
 .container,
 .cards {
   width: 80%;
   margin: 0 auto;
   box-sizing: border-box;
-  background:white;
-  color:black;
   
   
    display: flex;
