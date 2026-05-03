@@ -52,7 +52,12 @@ font-size:18px;			border-bottom:1px solid lightcoral; /* modello macchina */
 	
 }
 
-
+/* Tablet e smartphone */
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+}
 
 
 		
