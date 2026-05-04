@@ -119,20 +119,7 @@ gap: clamp(3px, 2vw, 6px);
 
 }
 
-/* Tablet e smartphone */
-@media (max-width: 1024px) {
-  .cards {
-    
-    
 
-    display:flex;
-    flex-direction: column;
-    
-    
-    
-    width: 98%;
-  }
-}
 
 /* SINGOLA CARD */
 .card { 			
@@ -177,5 +164,20 @@ ul {
 
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   padding:10px 10px 10px 30px;
+}
+
+
+/* Tablet e smartphone */
+@media (max-width: 1024px) {
+  .cards {
+    display:flex;
+    flex-direction: column;
+    width: 98%;
+  }
+  
+  .logo{width:98%;}
+  
+  .logo img{width:50%;}
+  
 }
 
