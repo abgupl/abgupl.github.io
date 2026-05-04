@@ -16,14 +16,11 @@
 <body>
    
 
-<div class="container">
 
-  <select id="auto1" onchange="aggiorna()"></select>
-  <select id="auto2" onchange="aggiorna()"></select>
-</div>
+  <div class="cards"> 
+  <div class="card"> 
+	  	 <div class="selettore"> <select id="auto1" onchange="aggiorna()"></select></div>
 
-<div class="cards">
-  <div class="card">
    <div class="img-box">
   <img id="img1">
 </div>
@@ -48,7 +45,12 @@
     </ul>
   </div>
 
+
+
   <div class="card">
+		 <div class="selettore"> <select id="auto2" onchange="aggiorna()"></select></div>
+
+
   <div class="img-box">
   <img id="img2">
 </div>
@@ -76,7 +78,7 @@
 <script>
 const auto = {
 
-  "Seleziona Auto": {
+ "Seleziona Auto": {
     img: "foto auto/logo2.jpg",
     c1: "-",
     c2: "-",
