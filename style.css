@@ -10,7 +10,7 @@ body {
 .card h2 {	
 font-style:italic;
 font-size:18px;			border-bottom:1px solid lightcoral; /* modello macchina */
-  margin: 0px 8px 25px 8px;
+  margin: 0px 8px 2% 8px;
 }
 
 
@@ -18,26 +18,28 @@ font-size:18px;			border-bottom:1px solid lightcoral; /* modello macchina */
 
 
 .img-box {  				 border:0px solid red; /* modello macchina */
-  width: 100%; height:250px;
+  width: 100%;
+  height:300px;
   overflow: hidden;   /* taglia le parti in eccesso */
   border-radius: 8px;
   display: flex;
-  padding-top:5px;
+padding-top:5px;
   align-items: center;
-  margin-bottom:20px;
+  margin-bottom:2.5%;
   justify-content: center;
 }
 
-.img-box img {  
-  width: 100%;
+.img-box img {  border:0px solid blue; /* modello macchina */
+  width:100%;
   height: 100%;
-  object-fit: contain;  /* mantiene proporzioni senza deformare */
+  object-fit: contain; 
+
 }
 
 
 .logo {
   text-align: center;
-
+				
  border: 1px solid #ccc;
 width:80%;
 background-color:white;
@@ -80,12 +82,12 @@ h1 {
 
 .cards select {
   flex: 1;
-  padding: 15px 35px 15px 10px; /* spazio a destra per freccia */
+  padding: 2% 35px 2% 10px; /* spazio a destra per freccia */
   font-size: 16px;
   text-align: center;
   text-align-last: center; 
   border: 0px solid #888;
-font-size:16px;
+font-size: clamp(14px, 1vw, 16px);
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -133,7 +135,8 @@ gap: clamp(3px, 2vw, 6px);
 }
 
 
-.selettore { border: 0px solid red; margin: 0 auto;
+.selettore {; margin: 0 auto;
+
 }
 
 
@@ -149,17 +152,18 @@ img {
 /* LISTE */
 h2 {
   margin: 10px 0;
+
 }
 
 
-h3 {font-size:14px;padding-left:10px;   color:steelblue; text-align:left;
+h3 {font-size: clamp(12px, 1vw, 14px);padding-left:20px;   color:steelblue; text-align:left;
   margin: 0px; 					border:0px solid red; /* caratteristiche vantaggi */
 }
 
 
 ul {
   text-align: left;	
-  margin:0px 8px 20px 8px;		 		border:1px solid #ccc; /* caratteristiche vantaggi */
+  margin:0px 20px 2% 20px;		 		border:1px solid #ccc; /* caratteristiche vantaggi */
   border-radius:8px;
 
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -167,8 +171,10 @@ ul {
 }
 
 
+li {font-size: clamp(12px, 1vw, 16px);}
+
 /* Tablet e smartphone */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .cards {
     display:flex;
     flex-direction: column;
@@ -179,5 +185,7 @@ ul {
   
   .logo img{width:50%;}
   
+
+
 }
 
