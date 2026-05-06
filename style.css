@@ -173,6 +173,14 @@ ul {
 
 li {font-size: clamp(12px, 1vw, 16px);}
 
+
+@media (max-width: 1068px) {
+.cards{width:98%;}
+
+.logo{width:98%;}
+
+}
+
 /* Tablet e smartphone */
 @media (max-width: 768px) {
   .cards {
