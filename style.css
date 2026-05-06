@@ -186,10 +186,10 @@ li {font-size: clamp(12px, 1vw, 16px);}
   .cards {
     display:flex;
     flex-direction: column;
-    width: 98%;
+    width: 90%;
   }
   
-  .logo{width:98%;}
+  .logo{width:90%;}
   
   .logo img{width:50%;}
   
