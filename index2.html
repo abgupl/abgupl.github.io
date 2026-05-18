@@ -930,6 +930,26 @@ function aggiorna() {
     img2.style.display = "block";
   }
 }
+
+function setLanguage(lang) {
+
+  const elements = document.querySelectorAll("[data-it]");
+
+  elements.forEach(el => {
+
+    if (lang === "en") {
+
+      el.innerText = el.getAttribute("data-en");
+
+    } else {
+
+      el.innerText = el.getAttribute("data-it");
+
+    }
+
+  });
+
+}
 </script>
 
 <!-- Bottone lingua -->
