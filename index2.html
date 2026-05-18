@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style2.css">
+<meta charset="UTF-8">
+<title>ABG UPL</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+
+
+
+<body>
+   
+
+
+  <div class="cards"> 
+  <div class="card"> 
+	  	 <div class="selettore">
+
+<input type="text" id="auto1" placeholder="Cerca auto..." onfocus="pulisciSeVuoto(this)" oninput="filtra('auto1','list1')" autocomplete="off">
+
+ <button type="button" class="lens" onclick="toggleLista('list1')" event.preventDefault()">⌕</button>
+
+
+  <div class="dropdown" id="list1"></div>
+</div>
+
+<div class="img-box">
+  <img id="logo1" src="foto auto/logo.jpg">
+  <img id="img1" style="display:none;">
+</div>
+    <h2 id="nome1">Seleziona Auto</h2>
+
+
+
+    <h3>Caratteristiche</h3>
+    <ul>
+      <li id="c1a"></li>
+      <li id="c2a"></li>
+      <li id="c3a"></li>
+      <li id="c4a"></li>
+    </ul>
+
+    <h3>Vantaggi</h3>
+    <ul>
+      <li id="v1a"></li>
+      <li id="v2a"></li>
+      <li id="v3a"></li>
+      <li id="v4a"></li>
+    </ul>
+  </div>
+
+
+
+  <div class="card">
+		 <div class="selettore">
+<input type="text" id="auto2" placeholder="Cerca auto..." onfocus="pulisciSeVuoto(this)" oninput="filtra('auto2','list2')" autocomplete="off">
+
+ <button type="button" class="lens" onclick="toggleLista('list2')" event.preventDefault()">⌕</button>
+
+
+  <div class="dropdown" id="list2"></div>
+</div>
+
+
+  <div class="img-box">
+  <img id="logo2" src="foto auto/logo.jpg">
+  <img id="img2" style="display:none;">
+</div>
+
+
+    <h2 id="nome2">Seleziona Auto</h2>
+
+
+    <h3>Caratteristiche</h3>
+    <ul>
+      <li id="c1b"></li>
+      <li id="c2b"></li>
+      <li id="c3b"></li>
+      <li id="c4b"></li>
+    </ul>
+
+    <h3>Vantaggi</h3>
+    <ul>
+      <li id="v1b"></li>
+      <li id="v2b"></li>
+      <li id="v3b"></li>
+      <li id="v4b"></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+const auto = {
+
+ "Seleziona Auto": {
+    img: "foto auto/logo2.jpg",
+    c1: "-",
+    c2: "-",
+    c3: "-",
+    c4: "-",
+    v1: "-",
+    v2: "-",
+    v3: "-",
+    v4: "-"
+  },
+
+
+"Audi A5": {
+  img: "foto auto/audi a5.jpg",
+  c1: "Bagagliaio da circa 430 litri ideale per viaggi",
+  c2: "Interni premium eleganti e curati nei dettagli",
+  c3: "Guida fluida e stabile su ogni percorso",
+  c4: "Motorizzazione ibrida efficiente e silenziosa",
+  v1: "Perfetta per lunghi viaggi senza stress",
+  v2: "Ideale per clienti business e rappresentanza",
+  v3: "Comfort elevato anche in autostrada",
+  v4: "Eleganza e prestazioni in un’unica soluzione"
+},
+
+"Audi Q2": {
+  img: "foto auto/audi q2.jpg",
+  c1: "Bagagliaio da circa 380 litri pratico quotidiano",
+  c2: "SUV compatto premium perfetto per la città",
+  c3: "Agile e scattante nel traffico urbano",
+  c4: "Motorizzazione ibrida dai consumi ridotti",
+  v1: "Facile da parcheggiare ovunque",
+  v2: "Ideale per muoversi in città senza stress",
+  v3: "Guida alta e confortevole",
+  v4: "Perfetta per chi cerca stile e praticità"
+},
+
+"Audi Q3": {
+  img: "foto auto/audi q3.jpg",
+  c1: "Bagagliaio da circa 375 litri (ibrida)",
+  c2: "SUV spazioso e molto confortevole",
+  c3: "Guida stabile e sicura",
+  c4: "Tecnologia ibrida moderna",
+  v1: "Ideale per famiglia e viaggi",
+  v2: "Comfort elevato",
+  v3: "Guida sicura",
+  v4: "Versatile per ogni utilizzo"
+},
+
+  "BYD Atto 2": {
+  img: "foto auto/atto2.jpg",
+  c1: "Bagagliaio compatto da 400 litri",
+  c2: "SUV elettrico compatto e moderno",
+  c3: "Buona autonomia per uso urbano",
+  c4: "Tecnologia elettrica avanzata BYD",
+  v1: "Perfetta per città e tragitti quotidiani",
+  v2: "Costi di utilizzo molto bassi",
+  v3: "Guida silenziosa e fluida",
+  v4: "Design moderno e giovanile"
+},
+
+  
+"BYD Seal 6": {
+  img: "foto auto/byd seal 6.jpg",
+  c1: "Bagagliaio da circa 420 litri comodo",
+  c2: "Berlina moderna tecnologica",
+  c3: "Guida fluida e silenziosa",
+  c4: "Sistema ibrido avanzato",
+  v1: "Consumi molto ridotti",
+  v2: "Comfort elevato",
+  v3: "Guida rilassante",
+  v4: "Perfetta per uso moderno"
+},
+
+
+"BYD Seal U": {
+  img: "foto auto/byd seal u.jpg",
+  c1: "Bagagliaio da circa 570 litri molto ampio",
+  c2: "SUV elettrico/ibrido moderno",
+  c3: "Tecnologia avanzata a bordo",
+  c4: "Guida silenziosa e fluida",
+  v1: "Consumi ridotti",
+  v2: "Grande comfort",
+  v3: "Spazio elevato",
+  v4: "Perfetto per viaggi lunghi"
+},
+
+
+"Citroën DS7": {
+  img: "foto auto/ds7.jpg",
+  c1: "Bagagliaio da circa 500 litri spazioso",
+  c2: "SUV premium estremamente confortevole",
+  c3: "Sospensioni morbide",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Massimo comfort nei viaggi",
+  v2: "Esperienza premium",
+  v3: "Interni eleganti",
+  v4: "Ideale clienti esigenti"
+},
+
+"Cupra Formentor": {
+  img: "foto auto/formentor.jpg",
+  c1: "Bagagliaio da circa 400 litri funzionale",
+  c2: "SUV sportivo dal design accattivante",
+  c3: "Guida dinamica",
+  c4: "Motorizzazione ibrida performante",
+  v1: "Guida divertente",
+  v2: "Design distintivo",
+  v3: "Ottime prestazioni",
+  v4: "Ideale clienti dinamici"
+},
+
+"Fiat 500": {
+  img: "foto auto/500.jpg",
+  c1: "Dimensioni ultra compatte",
+  c2: "Icona di stile italiano",
+  c3: "Interni curati e personalizzabili",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Perfetta per la città",
+  v2: "Consumi molto contenuti",
+  v3: "Facilissima da parcheggiare",
+  v4: "Ideale per neopatentati"
+},
+
+"Fiat 500 Cabrio": {
+  img: "foto auto/500c.jpg",
+  c1: "Tetto apribile in tela",
+  c2: "Design elegante e distintivo",
+  c3: "Interni confortevoli",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Guida all’aria aperta",
+  v2: "Perfetta per la città",
+  v3: "Compatta e maneggevole",
+  v4: "Stile unico"
+},
+
+
+
+"Fiat 600": {
+  img: "foto auto/600.jpg",
+  c1: "Bagagliaio da circa 350 litri versatile",
+  c2: "SUV urbano compatto",
+  c3: "Interni ben organizzati",
+  c4: "Motorizzazione ibrida economica",
+  v1: "Perfetta per la città",
+  v2: "Consumi contenuti",
+  v3: "Facile da guidare",
+  v4: "Ideale neopatentati"
+},
+
+"Fiat Panda": {
+  img: "foto auto/panda.jpg",
+  c1: "Bagagliaio da circa 200 litri compatto",
+  c2: "City car pratica",
+  c3: "Costi gestione bassissimi",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Perfetta piccoli spostamenti",
+  v2: "Facile parcheggio",
+  v3: "Economica",
+  v4: "Ideale seconda auto"
+},
+
+"Fiat Grande Panda": {
+  img: "foto auto/nuovapanda.jpg",
+  c1: "Bagagliaio da circa 330 litri pratico",
+  c2: "City SUV spazioso",
+  c3: "Interni funzionali",
+  c4: "Motorizzazione ibrida moderna",
+  v1: "Ottima uso quotidiano",
+  v2: "Consumi ridotti",
+  v3: "Perfetta famiglie",
+  v4: "Facile guida"
+},
+
+"Ford Focus": {
+  img: "foto auto/focus.jpg",
+  c1: "Bagagliaio da circa 360 litri equilibrato",
+  c2: "Berlina stabile e confortevole",
+  c3: "Ottima tenuta strada",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Perfetta autostrada",
+  v2: "Guida sicura",
+  v3: "Comfort viaggi",
+  v4: "Uso quotidiano"
+},
+
+"Ford Puma": {
+  img: "foto auto/puma.jpg",
+  c1: "Bagagliaio da circa 420 litri intelligente",
+  c2: "SUV compatto dinamico",
+  c3: "Guida agile",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Versatile",
+  v2: "Spazio ottimizzato",
+  v3: "Facile città",
+  v4: "Ottimo compromesso"
+},
+
+
+	"Fiat Tipo": {
+  img: "foto auto/tipo.jpg",
+  c1: "Bagagliaio ampio e pratico per ogni esigenza",
+  c2: "Berlina versatile adatta alla famiglia",
+  c3: "Consumi ridotti e manutenzione economica",
+  c4: "Ottimo rapporto qualità prezzo",
+  v1: "Spaziosa e comoda per tutti i passeggeri",
+  v2: "Ideale sia per città che autostrada",
+  v3: "Semplice da guidare e affidabile",
+  v4: "Perfetta per chi cerca praticità quotidiana"
+},
+
+	
+"Ford Tourneo": {
+  img: "foto auto/tourneo.jpg",
+  c1: "Bagagliaio oltre 650 litri molto ampio",
+  c2: "Veicolo spazioso modulabile",
+  c3: "Configurazione interna flessibile",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Perfetto famiglie numerose",
+  v2: "Grande capacità carico",
+  v3: "Versatile",
+  v4: "Ideale viaggi lunghi"
+},
+
+"Hyundai i10": {
+  img: "foto auto/i10.jpg",
+  c1: "Bagagliaio da circa 230 litri compatto",
+  c2: "City car agile",
+  c3: "Consumi contenuti",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Perfetta città",
+  v2: "Costi bassi",
+  v3: "Facile parcheggio",
+  v4: "Ideale quotidiano"
+},
+
+"Hyundai Kona": {
+  img: "foto auto/kona.jpg",
+  c1: "Bagagliaio da circa 430 litri versatile",
+  c2: "SUV moderno",
+  c3: "Comfort elevato",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Tecnologica",
+  v2: "Ottima viaggi",
+  v3: "Versatile",
+  v4: "Comfort elevato"
+},
+
+"Jeep Avenger": {
+  img: "foto auto/avenger.jpg",
+  c1: "Bagagliaio da circa 355-380 litri pratico",
+  c2: "SUV compatto moderno",
+  c3: "Guida alta e sicura",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Perfetta città",
+  v2: "Facile da guidare",
+  v3: "Stile distintivo",
+  v4: "Ideale urbano"
+},
+
+"Jeep Compass": {
+  img: "foto auto/compass.jpg",
+  c1: "Bagagliaio da circa 550 litri spazioso",
+  c2: "SUV robusto e versatile",
+  c3: "Adatto a ogni terreno",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Perfetto viaggi e avventura",
+  v2: "Spazio famiglia",
+  v3: "Versatile",
+  v4: "Comfort elevato"
+},
+
+"Jeep Renegade": {
+  img: "foto auto/renegade.jpg",
+  c1: "Bagagliaio da circa 330 litri compatto",
+  c2: "SUV iconico",
+  c3: "Adatto a sterrati",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Divertente",
+  v2: "Compatta",
+  v3: "Stile Jeep",
+  v4: "Versatile"
+},
+
+"Mercedes Classe A": {
+  img: "foto auto/cla.jpg",
+  c1: "Bagagliaio da circa 340 litri utile",
+  c2: "Compatta premium tecnologica",
+  c3: "Infotainment avanzato",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Lusso compatto",
+  v2: "Comfort elevato",
+  v3: "Qualità premium",
+  v4: "Perfetta città"
+},
+
+
+"Mercedes Classe B": {
+  img: "foto auto/classe b.jpg",
+  c1: "Bagagliaio da circa 455 litri spazioso",
+  c2: "Monovolume compatta premium",
+  c3: "Interni comodi e tecnologici",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Comfort elevato",
+  v2: "Spazio interno ottimo",
+  v3: "Qualità premium",
+  v4: "Perfetta per famiglie"
+},
+
+
+"Mercedes Classe C": {
+  img: "foto auto/clc.jpg",
+  c1: "Bagagliaio da circa 420 litri capiente",
+  c2: "Berlina elegante",
+  c3: "Guida fluida e silenziosa",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Perfetta rappresentanza",
+  v2: "Comfort elevato",
+  v3: "Silenziosa",
+  v4: "Ideale viaggi"
+},
+
+	"Mercedes Classe E": {
+  img: "foto auto/e200.jpg",
+  c1: "Bagagliaio spazioso ideale per viaggi e famiglia",
+  c2: "Berlina premium elegante e raffinata",
+  c3: "Comfort elevato anche nei lunghi tragitti",
+  c4: "Motorizzazione efficiente con consumi contenuti",
+  v1: "Interni lussuosi e tecnologici",
+  v2: "Perfetta per lavoro e rappresentanza",
+  v3: "Guida fluida e silenziosa",
+  v4: "Massimo comfort per conducente e passeggeri"
+},
+	
+"Mercedes GLA": {
+  img: "foto auto/gla.jpg",
+  c1: "Bagagliaio da circa 435 litri capiente",
+  c2: "SUV compatto premium",
+  c3: "Guida alta e sicura",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Comfort elevato",
+  v2: "Tecnologia avanzata",
+  v3: "Design elegante",
+  v4: "Ottimo uso quotidiano"
+},
+
+"Mercedes GLB": {
+  img: "foto auto/glb.jpg",
+  c1: "Bagagliaio da circa 570 litri molto ampio",
+  c2: "SUV spazioso",
+  c3: "Interni modulari",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Perfetto famiglie",
+  v2: "Grande spazio",
+  v3: "Versatile",
+  v4: "Ideale viaggi lunghi"
+},
+
+
+
+
+
+"Mercedes GLC": {
+  img: "foto auto/glc.jpg",
+  c1: "Bagagliaio da circa 550 litri ampio",
+  c2: "SUV premium spazioso",
+  c3: "Comfort elevato",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Perfetto famiglia",
+  v2: "Lusso",
+  v3: "Viaggi comodi",
+  v4: "Guida sicura"
+},
+
+"MG 3": {
+  img: "foto auto/mg 3.jpg",
+  c1: "Bagagliaio da circa 270 litri compatto",
+  c2: "City car semplice",
+  c3: "Consumi contenuti",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Prezzo conveniente",
+  v2: "Facile guida",
+  v3: "Perfetta città",
+  v4: "Costi bassi"
+},
+
+"MG HS": {
+  img: "foto auto/mg hs.jpg",
+  c1: "Bagagliaio da circa 430 litri spazioso",
+  c2: "SUV confortevole",
+  c3: "Interni ampi",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Ottimo qualità prezzo",
+  v2: "Spaziosa",
+  v3: "Tecnologica",
+  v4: "Comfort viaggi"
+},
+
+"MG ZS": {
+  img: "foto auto/mg zs.jpg",
+  c1: "Bagagliaio da circa 420 litri pratico",
+  c2: "SUV compatto accessibile",
+  c3: "Guida semplice",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Prezzo competitivo",
+  v2: "Spazioso",
+  v3: "Facile guida",
+  v4: "Ideale quotidiano"
+},
+
+"Opel Corsa": {
+  img: "foto auto/corsa.jpg",
+  c1: "Bagagliaio da circa 290 litri utile",
+  c2: "City car moderna",
+  c3: "Qualità solida",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Economica",
+  v2: "Agile città",
+  v3: "Affidabile",
+  v4: "Perfetta urbano"
+},
+
+
+  "Opel Frontera": {
+  img: "foto auto/frontera.jpg",
+  c1: "Bagagliaio molto ampio da circa 460–500 litri",
+  c2: "SUV robusto e spazioso",
+  c3: "Buon comfort di guida anche su lunghe distanze",
+  c4: "Disponibile anche in versione elettrificata",
+  v1: "Ideale per famiglia e viaggi lunghi",
+  v2: "Grande spazio interno",
+  v3: "Versatile anche su strade miste",
+  v4: "Buon rapporto qualità/prezzo"
+},
+
+  
+"Peugeot 208": {
+  img: "foto auto/208.jpg",
+  c1: "Bagagliaio da circa 290 litri compatto",
+  c2: "City car moderna",
+  c3: "Consumi contenuti",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Perfetta città",
+  v2: "Tecnologica",
+  v3: "Agile",
+  v4: "Qualità prezzo"
+},
+
+
+
+"Peugeot 308": {
+  img: "foto auto/308.jpg",
+  c1: "Bagagliaio da circa 412 litri ampio e modulare",
+  c2: "Design elegante e tecnologico con fari Full LED",
+  c3: "Guida precisa e dinamica",
+  c4: "Motorizzazioni benzina, diesel e ibride",
+  v1: "Comfort elevato",
+  v2: "Tecnologia avanzata di bordo",
+  v3: "Spaziosa per la categoria",
+  v4: "Piacere di guida"
+},
+
+
+
+
+"Peugeot 2008": {
+  img: "foto auto/2008.jpg",
+  c1: "Bagagliaio da circa 400 litri comodo",
+  c2: "SUV compatto elegante",
+  c3: "Interni tecnologici",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Comfort",
+  v2: "Tecnologia",
+  v3: "Design moderno",
+  v4: "Versatile"
+},
+
+
+
+
+"Peugeot 3008": {
+  img: "foto auto/3008.jpg",
+  c1: "Bagagliaio da circa 520-590 litri molto capiente",
+  c2: "SUV compatto elegante e moderno",
+  c3: "Interni tecnologici con i-Cockpit",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Comfort elevato",
+  v2: "Tecnologia avanzata",
+  v3: "Spazio ideale famiglia",
+  v4: "Ottimo per viaggi lunghi"
+},
+
+
+"Peugeot 5008": {
+  img: "foto auto/5008.jpg",
+  c1: "Bagagliaio da circa 700 litri molto ampio",
+  c2: "SUV 7 posti",
+  c3: "Interni modulabili",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Perfetto famiglie numerose",
+  v2: "Grande spazio",
+  v3: "Versatile",
+  v4: "Viaggi lunghi"
+},
+
+
+"Renault Austral": {
+  img: "foto auto/austral.jpg",
+  c1: "Bagagliaio da circa 460 litri capiente",
+  c2: "SUV tecnologico",
+  c3: "Interni digitali",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Comfort viaggi",
+  v2: "Spazioso",
+  v3: "Consumi ridotti",
+  v4: "Ideale famiglia"
+},
+
+
+"Renault Captur": {
+  img: "foto auto/captur.jpg",
+  c1: "Bagagliaio da circa 390 litri modulabile",
+  c2: "SUV compatto",
+  c3: "Interni confortevoli",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Economico",
+  v2: "Pratico",
+  v3: "Design moderno",
+  v4: "Ideale famiglie"
+},
+
+
+
+"Renault Clio": {
+  img: "foto auto/clio.jpg",
+  c1: "Bagagliaio da circa 280 litri utile",
+  c2: "City car equilibrata",
+  c3: "Consumi bassi",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Economica",
+  v2: "Facile guida",
+  v3: "Affidabile",
+  v4: "Perfetta quotidiano"
+},
+
+"Renault Espace": {
+  img: "foto auto/espace.jpg",
+  c1: "Bagagliaio da circa 650 litri molto ampio",
+  c2: "SUV 7 posti",
+  c3: "Interni spaziosi",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Perfetto famiglia numerosa",
+  v2: "Comfort viaggi",
+  v3: "Versatile",
+  v4: "Ideale vacanze"
+},
+
+
+"Renault Rafale": {
+  img: "foto auto/rafale.jpg",
+  c1: "Bagagliaio da circa 530 litri capiente",
+  c2: "SUV coupé sportivo",
+  c3: "Design moderno e aggressivo",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Stile distintivo",
+  v2: "Prestazioni elevate",
+  v3: "Tecnologia avanzata",
+  v4: "Ideale per chi cerca sportività"
+},
+
+
+"Renault Symbioz": {
+  img: "foto auto/symbioz.jpg",
+  c1: "Bagagliaio da circa 440 litri capiente",
+  c2: "SUV moderno",
+  c3: "Interni evoluti",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Tecnologica",
+  v2: "Consumi ridotti",
+  v3: "Comfort",
+  v4: "Ottimo compromesso"
+},
+
+
+"Seat Arona": {
+  img: "foto auto/arona.jpg",
+  c1: "Bagagliaio da circa 400 litri pratico",
+  c2: "SUV compatto urbano",
+  c3: "Guida agile e facile",
+  c4: "Motorizzazione efficiente",
+  v1: "Perfetta città",
+  v2: "Facile parcheggio",
+  v3: "Buon comfort",
+  v4: "Ottimo rapporto qualità prezzo"
+},
+
+
+"Skoda Fabia": {
+  img: "foto auto/fabia.jpg",
+  c1: "Bagagliaio da circa 350 litri spazioso",
+  c2: "City car solida",
+  c3: "Qualità elevata",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Spaziosa",
+  v2: "Economica",
+  v3: "Affidabile",
+  v4: "Perfetta quotidiano"
+},
+
+"Skoda Kamiq": {
+  img: "foto auto/kamiq.jpg",
+  c1: "Bagagliaio da circa 380 litri pratico",
+  c2: "SUV compatto",
+  c3: "Interni spaziosi",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Ottimo spazio",
+  v2: "Comfort",
+  v3: "Prezzo competitivo",
+  v4: "Ideale famiglia"
+},
+
+"Skoda Karoq": {
+  img: "foto auto/karoq.jpg",
+  c1: "Bagagliaio da circa 480 litri capiente",
+  c2: "SUV medio solido",
+  c3: "Abitacolo spazioso",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Spazio famiglia",
+  v2: "Affidabile",
+  v3: "Comfort",
+  v4: "Ottimo qualità prezzo"
+},
+
+"Volkswagen Polo": {
+  img: "foto auto/polo.jpg",
+  c1: "Bagagliaio da circa 330 litri pratico",
+  c2: "City car solida",
+  c3: "Qualità elevata",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Affidabile",
+  v2: "Comfort",
+  v3: "Guida sicura",
+  v4: "Perfetta quotidiano"
+},
+
+"Volkswagen T-Cross": {
+  img: "foto auto/tcross.jpg",
+  c1: "Bagagliaio da circa 420 litri versatile",
+  c2: "SUV compatto pratico",
+  c3: "Sedili modulabili",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Spazio ottimizzato",
+  v2: "Versatile",
+  v3: "Comfort",
+  v4: "Perfetto famiglia"
+},
+
+"Volkswagen T-Roc": {
+  img: "foto auto/troc.jpg",
+  c1: "Bagagliaio da circa 410 litri comodo",
+  c2: "SUV compatto moderno",
+  c3: "Qualità Volkswagen",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Stile apprezzato",
+  v2: "Guida stabile",
+  v3: "Comfort",
+  v4: "Ottimo quotidiano"
+},
+
+"Volkswagen Taigo": {
+  img: "foto auto/taigo.jpg",
+  c1: "Bagagliaio da circa 410 litri pratico",
+  c2: "SUV coupé sportivo",
+  c3: "Design moderno",
+  c4: "Motorizzazione ibrida efficiente",
+  v1: "Design distintivo",
+  v2: "Comfort",
+  v3: "Consumi contenuti",
+  v4: "Perfetto urbano"
+}
+};
+
+// Popola menu
+const s1 = document.getElementById("auto1");
+const s2 = document.getElementById("auto2");
+
+
+// Popola suggerimenti
+for (let nome in auto) {
+  lista1.innerHTML += `<option value="${nome}">`;
+  lista2.innerHTML += `<option value="${nome}">`;
+}
+
+// Valori iniziali
+s1.value = "Seleziona Auto";
+s2.value = "Seleziona Auto";
+
+
+
+
+function pulisciSeVuoto(el){
+  el.value = "";
+}
+
+
+
+
+
+
+
+
+function renderLista(id){
+  const box = document.getElementById(id);
+  box.innerHTML = "";
+
+  for (let nome in auto){
+    let div = document.createElement("div");
+    div.innerText = nome;
+
+    div.onclick = function(){
+      if(id === "list1"){
+        document.getElementById("auto1").value = nome;
+      } else {
+        document.getElementById("auto2").value = nome;
+      }
+      box.style.display = "none";
+      aggiorna();
+    };
+
+    box.appendChild(div);
+  }
+}
+
+function filtra(inputId, listId){
+  const valore = document.getElementById(inputId).value.toLowerCase();
+  const box = document.getElementById(listId);
+
+  box.innerHTML = "";
+
+  for (let nome in auto){
+    if(nome.toLowerCase().includes(valore)){
+      let div = document.createElement("div");
+      div.innerText = nome;
+
+      div.onclick = function(){
+        document.getElementById(inputId).value = nome;
+        box.style.display = "none";
+        aggiorna();
+      };
+
+      box.appendChild(div);
+    }
+  }
+
+  box.style.display = "block";
+}
+
+
+
+function toggleLista(id){
+  const box = document.getElementById(id);
+  box.style.display = box.style.display === "block" ? "none" : "block";
+  if(box.style.display === "block") renderLista(id);
+}
+
+
+
+
+
+
+
+
+function aggiorna() {
+
+  const a = auto[s1.value] || auto["Seleziona Auto"];
+  const b = auto[s2.value] || auto["Seleziona Auto"];
+
+  // =====================
+  // CARD 1
+  // =====================
+  document.getElementById("nome1").innerText =
+    s1.value || "Seleziona Auto";
+
+  document.getElementById("c1a").innerText = a.c1;
+  document.getElementById("c2a").innerText = a.c2;
+  document.getElementById("c3a").innerText = a.c3;
+  document.getElementById("c4a").innerText = a.c4;
+
+  document.getElementById("v1a").innerText = a.v1;
+  document.getElementById("v2a").innerText = a.v2;
+  document.getElementById("v3a").innerText = a.v3;
+  document.getElementById("v4a").innerText = a.v4;
+
+  const logo1 = document.getElementById("logo1");
+  const img1 = document.getElementById("img1");
+
+  if (s1.value === "Seleziona Auto" || !auto[s1.value]) {
+    logo1.style.display = "block";
+    img1.style.display = "none";
+  } else {
+    logo1.style.display = "none";
+    img1.src = a.img;
+    img1.style.display = "block";
+  }
+
+  // =====================
+  // CARD 2
+  // =====================
+  document.getElementById("nome2").innerText =
+    s2.value || "Seleziona Auto";
+
+  document.getElementById("c1b").innerText = b.c1;
+  document.getElementById("c2b").innerText = b.c2;
+  document.getElementById("c3b").innerText = b.c3;
+  document.getElementById("c4b").innerText = b.c4;
+
+  document.getElementById("v1b").innerText = b.v1;
+  document.getElementById("v2b").innerText = b.v2;
+  document.getElementById("v3b").innerText = b.v3;
+  document.getElementById("v4b").innerText = b.v4;
+
+  const logo2 = document.getElementById("logo2");
+  const img2 = document.getElementById("img2");
+
+  if (s2.value === "Seleziona Auto" || !auto[s2.value]) {
+    logo2.style.display = "block";
+    img2.style.display = "none";
+  } else {
+    logo2.style.display = "none";
+    img2.src = b.img;
+    img2.style.display = "block";
+  }
+}
+</script>
+
+<div class="logo">
+  <img src="foto auto/logo.jpg" alt="Logo">
+</div> 
+
+</body>
+</html>
