@@ -37,7 +37,7 @@
 
 
 
-    <h3>Caratteristiche</h3>
+    <h3 data-translate>Caratteristiche</h3>
     <ul>
       <li id="c1a"></li>
       <li id="c2a"></li>
@@ -45,7 +45,7 @@
       <li id="c4a"></li>
     </ul>
 
-    <h3>Vantaggi</h3>
+    <h3 data-translate>Vantaggi</h3>
     <ul>
       <li id="v1a"></li>
       <li id="v2a"></li>
@@ -932,15 +932,71 @@ function aggiorna() {
 }
 
 
+
+async function translatePage(targetLang) {
+
+  const elements = document.querySelectorAll('[data-translate]');
+
+  for (const el of elements) {
+
+    const originalText = el.innerText;
+
+    try {
+
+      const response = await fetch(
+
+        `https://translation.googleapis.com/language/translate/v2?key= AIzaSyCqrG48VThkWhY_tWbuzKI_UAXvJvACgQ8`,
+
+        {
+
+          method: 'POST',
+
+          headers: {
+
+            'Content-Type': 'application/json'
+
+          },
+
+          body: JSON.stringify({
+
+            q: originalText,
+
+            target: targetLang
+
+          })
+
+        }
+
+      );
+
+      const data = await response.json();
+
+      el.innerText =
+
+        data.data.translations[0].translatedText;
+
+    } catch (error) {
+
+      console.error('Errore traduzione:', error);
+
+    }
+
+  }
+
+}
+
+
+
 </script>
 
 <!-- Bottone lingua -->
 
-<button onclick="setLanguage('en')" style="border:none; background:none; cursor:pointer;">
+<button onclick="translatePage('en')">
 
-  <img src="https://flagcdn.com/w40/gb.png" alt="English" width="32">
+  🇬🇧 English
 
-</button>
+</button
+
 
 <div class="logo">
   <img src="foto auto/logo.jpg" alt="Logo">
