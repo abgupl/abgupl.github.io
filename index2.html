@@ -933,70 +933,61 @@ function aggiorna() {
 
 
 
-async function translatePage(targetLang) {
+function googleTranslateElementInit() {
 
-  const elements = document.querySelectorAll('[data-translate]');
+  new google.translate.TranslateElement(
 
-  for (const el of elements) {
+    {
 
-    const originalText = el.innerText;
+      pageLanguage: 'it',
 
-    try {
+      includedLanguages: 'en,it',
 
-      const response = await fetch(
+      autoDisplay: false
 
-        `https://translation.googleapis.com/language/translate/v2?key= AIzaSyCqrG48VThkWhY_tWbuzKI_UAXvJvACgQ8`,
+    },
 
-        {
+    'google_translate_element'
 
-          method: 'POST',
+  );
 
-          headers: {
+}
 
-            'Content-Type': 'application/json'
+function translateToEnglish() {
 
-          },
+  const select = document.querySelector(".goog-te-combo");
 
-          body: JSON.stringify({
+  if (select) {
 
-            q: originalText,
+    select.value = "en";
 
-            target: targetLang
-
-          })
-
-        }
-
-      );
-
-      const data = await response.json();
-
-      el.innerText =
-
-        data.data.translations[0].translatedText;
-
-    } catch (error) {
-
-      console.error('Errore traduzione:', error);
-
-    }
+    select.dispatchEvent(new Event("change"));
 
   }
 
 }
 
 
+      
 
 </script>
 
-<!-- Bottone lingua -->
+<!-- Bandiera UK -->
 
-<button onclick="translatePage('en')">
+<button onclick="translateToEnglish()" 
 
-      <img src="https://flagcdn.com/w40/gb.png" width="32"> English
+style="border:none;background:none;cursor:pointer;font-size:30px;">
 
-</button
+🇬🇧
 
+</button>
+
+<!-- Google Translate nascosto -->
+
+<div id="google_translate_element" style="display:none;"></div>
+
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <div class="logo">
   <img src="foto auto/logo.jpg" alt="Logo">
