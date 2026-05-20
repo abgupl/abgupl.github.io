@@ -14,7 +14,11 @@ font-size:18px;			border-bottom:1px solid lightcoral; /* modello macchina */
 }
 
 
-
+.lingue img{
+  width:40px;
+  height:auto;
+  cursor:pointer;
+}
 
 
 .img-box {  				 border:0px solid red; /* modello macchina */

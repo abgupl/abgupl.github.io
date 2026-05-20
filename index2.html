@@ -95,6 +95,9 @@
 </div>
 
 <script>
+
+let lingua = "it";
+
 const auto = {
 
  "Seleziona Auto": {
@@ -112,672 +115,1386 @@ const auto = {
 
 "Audi A5": {
   img: "foto auto/audi a5.jpg",
-  c1: "Bagagliaio da circa 430 litri ideale per viaggi",
-  c2: "Interni premium eleganti e curati nei dettagli",
-  c3: "Guida fluida e stabile su ogni percorso",
-  c4: "Motorizzazione ibrida efficiente e silenziosa",
-  v1: "Perfetta per lunghi viaggi senza stress",
-  v2: "Ideale per clienti business e rappresentanza",
-  v3: "Comfort elevato anche in autostrada",
-  v4: "Eleganza e prestazioni in un’unica soluzione"
+
+  it: {
+    c1: "Bagagliaio da circa 430 litri ideale per viaggi",
+    c2: "Interni premium eleganti e curati nei dettagli",
+    c3: "Guida fluida e stabile su ogni percorso",
+    c4: "Motorizzazione ibrida efficiente e silenziosa",
+
+    v1: "Perfetta per lunghi viaggi senza stress",
+    v2: "Ideale per clienti business e rappresentanza",
+    v3: "Comfort elevato anche in autostrada",
+    v4: "Eleganza e prestazioni in un’unica soluzione"
+  },
+
+  en: {
+    c1: "430-liter trunk ideal for travel",
+    c2: "Premium elegant interior with refined details",
+    c3: "Smooth and stable driving experience",
+    c4: "Efficient and quiet hybrid engine",
+
+    v1: "Perfect for long stress-free trips",
+    v2: "Ideal for business and executive clients",
+    v3: "Excellent highway comfort",
+    v4: "Elegance and performance combined"
+  }
 },
 
 "Audi Q2": {
   img: "foto auto/audi q2.jpg",
-  c1: "Bagagliaio da circa 380 litri pratico quotidiano",
-  c2: "SUV compatto premium perfetto per la città",
-  c3: "Agile e scattante nel traffico urbano",
-  c4: "Motorizzazione ibrida dai consumi ridotti",
-  v1: "Facile da parcheggiare ovunque",
-  v2: "Ideale per muoversi in città senza stress",
-  v3: "Guida alta e confortevole",
-  v4: "Perfetta per chi cerca stile e praticità"
+
+  it:{
+    c1:"Bagagliaio da circa 380 litri pratico quotidiano",
+    c2:"SUV compatto premium perfetto per la città",
+    c3:"Agile e scattante nel traffico urbano",
+    c4:"Motorizzazione ibrida dai consumi ridotti",
+    v1:"Facile da parcheggiare ovunque",
+    v2:"Ideale per muoversi in città senza stress",
+    v3:"Guida alta e confortevole",
+    v4:"Perfetta per chi cerca stile e praticità"
+  },
+
+  en:{
+    c1:"380-liter trunk practical for daily use",
+    c2:"Compact premium SUV perfect for the city",
+    c3:"Agile and responsive in urban traffic",
+    c4:"Efficient hybrid engine with low consumption",
+    v1:"Easy to park anywhere",
+    v2:"Ideal for stress-free city driving",
+    v3:"High and comfortable driving position",
+    v4:"Perfect for those seeking style and practicality"
+  }
 },
 
 "Audi Q3": {
   img: "foto auto/audi q3.jpg",
-  c1: "Bagagliaio da circa 375 litri (ibrida)",
-  c2: "SUV spazioso e molto confortevole",
-  c3: "Guida stabile e sicura",
-  c4: "Tecnologia ibrida moderna",
-  v1: "Ideale per famiglia e viaggi",
-  v2: "Comfort elevato",
-  v3: "Guida sicura",
-  v4: "Versatile per ogni utilizzo"
+
+  it:{
+    c1:"Bagagliaio da circa 375 litri (ibrida)",
+    c2:"SUV spazioso e molto confortevole",
+    c3:"Guida stabile e sicura",
+    c4:"Tecnologia ibrida moderna",
+    v1:"Ideale per famiglia e viaggi",
+    v2:"Comfort elevato",
+    v3:"Guida sicura",
+    v4:"Versatile per ogni utilizzo"
+  },
+
+  en:{
+    c1:"375-liter trunk (hybrid version)",
+    c2:"Spacious and very comfortable SUV",
+    c3:"Stable and safe driving",
+    c4:"Modern hybrid technology",
+    v1:"Ideal for family and travel",
+    v2:"High comfort",
+    v3:"Safe driving experience",
+    v4:"Versatile for every use"
+  }
 },
 
-  "BYD Atto 2": {
+"BYD Atto 2": {
   img: "foto auto/atto2.jpg",
-  c1: "Bagagliaio compatto da 400 litri",
-  c2: "SUV elettrico compatto e moderno",
-  c3: "Buona autonomia per uso urbano",
-  c4: "Tecnologia elettrica avanzata BYD",
-  v1: "Perfetta per città e tragitti quotidiani",
-  v2: "Costi di utilizzo molto bassi",
-  v3: "Guida silenziosa e fluida",
-  v4: "Design moderno e giovanile"
+
+  it:{
+    c1:"Bagagliaio compatto da 400 litri",
+    c2:"SUV elettrico compatto e moderno",
+    c3:"Buona autonomia per uso urbano",
+    c4:"Tecnologia elettrica avanzata BYD",
+    v1:"Perfetta per città e tragitti quotidiani",
+    v2:"Costi di utilizzo molto bassi",
+    v3:"Guida silenziosa e fluida",
+    v4:"Design moderno e giovanile"
+  },
+
+  en:{
+    c1:"Compact 400-liter trunk",
+    c2:"Compact and modern electric SUV",
+    c3:"Good range for urban driving",
+    c4:"Advanced BYD electric technology",
+    v1:"Perfect for city and daily commuting",
+    v2:"Very low running costs",
+    v3:"Quiet and smooth driving",
+    v4:"Modern and youthful design"
+  }
 },
 
-  
 "BYD Seal 6": {
   img: "foto auto/byd seal 6.jpg",
-  c1: "Bagagliaio da circa 420 litri comodo",
-  c2: "Berlina moderna tecnologica",
-  c3: "Guida fluida e silenziosa",
-  c4: "Sistema ibrido avanzato",
-  v1: "Consumi molto ridotti",
-  v2: "Comfort elevato",
-  v3: "Guida rilassante",
-  v4: "Perfetta per uso moderno"
-},
 
+  it:{
+    c1:"Bagagliaio da circa 420 litri comodo",
+    c2:"Berlina moderna tecnologica",
+    c3:"Guida fluida e silenziosa",
+    c4:"Sistema ibrido avanzato",
+    v1:"Consumi molto ridotti",
+    v2:"Comfort elevato",
+    v3:"Guida rilassante",
+    v4:"Perfetta per uso moderno"
+  },
+
+  en:{
+    c1:"Comfortable 420-liter trunk",
+    c2:"Modern technological sedan",
+    c3:"Smooth and quiet driving",
+    c4:"Advanced hybrid system",
+    v1:"Very low fuel consumption",
+    v2:"High comfort",
+    v3:"Relaxing driving experience",
+    v4:"Perfect for modern use"
+  }
+},
 
 "BYD Seal U": {
   img: "foto auto/byd seal u.jpg",
-  c1: "Bagagliaio da circa 570 litri molto ampio",
-  c2: "SUV elettrico/ibrido moderno",
-  c3: "Tecnologia avanzata a bordo",
-  c4: "Guida silenziosa e fluida",
-  v1: "Consumi ridotti",
-  v2: "Grande comfort",
-  v3: "Spazio elevato",
-  v4: "Perfetto per viaggi lunghi"
-},
 
+  it:{
+    c1:"Bagagliaio da circa 570 litri molto ampio",
+    c2:"SUV elettrico/ibrido moderno",
+    c3:"Tecnologia avanzata a bordo",
+    c4:"Guida silenziosa e fluida",
+    v1:"Consumi ridotti",
+    v2:"Grande comfort",
+    v3:"Spazio elevato",
+    v4:"Perfetto per viaggi lunghi"
+  },
+
+  en:{
+    c1:"Very spacious 570-liter trunk",
+    c2:"Modern electric/hybrid SUV",
+    c3:"Advanced onboard technology",
+    c4:"Quiet and smooth driving",
+    v1:"Reduced consumption",
+    v2:"Excellent comfort",
+    v3:"Large interior space",
+    v4:"Perfect for long trips"
+  }
+},
 
 "Citroën DS7": {
   img: "foto auto/ds7.jpg",
-  c1: "Bagagliaio da circa 500 litri spazioso",
-  c2: "SUV premium estremamente confortevole",
-  c3: "Sospensioni morbide",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Massimo comfort nei viaggi",
-  v2: "Esperienza premium",
-  v3: "Interni eleganti",
-  v4: "Ideale clienti esigenti"
+
+  it:{
+    c1:"Bagagliaio da circa 500 litri spazioso",
+    c2:"SUV premium estremamente confortevole",
+    c3:"Sospensioni morbide",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Massimo comfort nei viaggi",
+    v2:"Esperienza premium",
+    v3:"Interni eleganti",
+    v4:"Ideale clienti esigenti"
+  },
+
+  en:{
+    c1:"Spacious 500-liter trunk",
+    c2:"Extremely comfortable premium SUV",
+    c3:"Soft suspension setup",
+    c4:"Efficient hybrid engine",
+    v1:"Maximum travel comfort",
+    v2:"Premium driving experience",
+    v3:"Elegant interior",
+    v4:"Ideal for demanding customers"
+  }
 },
 
 "Cupra Formentor": {
   img: "foto auto/formentor.jpg",
-  c1: "Bagagliaio da circa 400 litri funzionale",
-  c2: "SUV sportivo dal design accattivante",
-  c3: "Guida dinamica",
-  c4: "Motorizzazione ibrida performante",
-  v1: "Guida divertente",
-  v2: "Design distintivo",
-  v3: "Ottime prestazioni",
-  v4: "Ideale clienti dinamici"
+
+  it:{
+    c1:"Bagagliaio da circa 400 litri funzionale",
+    c2:"SUV sportivo dal design accattivante",
+    c3:"Guida dinamica",
+    c4:"Motorizzazione ibrida performante",
+    v1:"Guida divertente",
+    v2:"Design distintivo",
+    v3:"Ottime prestazioni",
+    v4:"Ideale clienti dinamici"
+  },
+
+  en:{
+    c1:"Functional 400-liter trunk",
+    c2:"Sporty SUV with eye-catching design",
+    c3:"Dynamic driving experience",
+    c4:"High-performance hybrid engine",
+    v1:"Fun to drive",
+    v2:"Distinctive design",
+    v3:"Excellent performance",
+    v4:"Ideal for dynamic drivers"
+  }
 },
 
 "Fiat 500": {
   img: "foto auto/500.jpg",
-  c1: "Dimensioni ultra compatte",
-  c2: "Icona di stile italiano",
-  c3: "Interni curati e personalizzabili",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Perfetta per la città",
-  v2: "Consumi molto contenuti",
-  v3: "Facilissima da parcheggiare",
-  v4: "Ideale per neopatentati"
+
+  it:{
+    c1:"Dimensioni ultra compatte",
+    c2:"Icona di stile italiano",
+    c3:"Interni curati e personalizzabili",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Perfetta per la città",
+    v2:"Consumi molto contenuti",
+    v3:"Facilissima da parcheggiare",
+    v4:"Ideale per neopatentati"
+  },
+
+  en:{
+    c1:"Ultra compact dimensions",
+    c2:"Italian style icon",
+    c3:"Refined and customizable interior",
+    c4:"Efficient hybrid engine",
+    v1:"Perfect for the city",
+    v2:"Very low fuel consumption",
+    v3:"Extremely easy to park",
+    v4:"Ideal for new drivers"
+  }
 },
 
 "Fiat 500 Cabrio": {
   img: "foto auto/500c.jpg",
-  c1: "Tetto apribile in tela",
-  c2: "Design elegante e distintivo",
-  c3: "Interni confortevoli",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Guida all’aria aperta",
-  v2: "Perfetta per la città",
-  v3: "Compatta e maneggevole",
-  v4: "Stile unico"
+
+  it:{
+    c1:"Tetto apribile in tela",
+    c2:"Design elegante e distintivo",
+    c3:"Interni confortevoli",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Guida all’aria aperta",
+    v2:"Perfetta per la città",
+    v3:"Compatta e maneggevole",
+    v4:"Stile unico"
+  },
+
+  en:{
+    c1:"Retractable fabric roof",
+    c2:"Elegant and distinctive design",
+    c3:"Comfortable interior",
+    c4:"Efficient hybrid engine",
+    v1:"Open-air driving experience",
+    v2:"Perfect for the city",
+    v3:"Compact and easy to handle",
+    v4:"Unique style"
+  }
 },
 
 
 
 "Fiat 600": {
   img: "foto auto/600.jpg",
-  c1: "Bagagliaio da circa 350 litri versatile",
-  c2: "SUV urbano compatto",
-  c3: "Interni ben organizzati",
-  c4: "Motorizzazione ibrida economica",
-  v1: "Perfetta per la città",
-  v2: "Consumi contenuti",
-  v3: "Facile da guidare",
-  v4: "Ideale neopatentati"
+
+  it:{
+    c1:"Bagagliaio da circa 350 litri versatile",
+    c2:"SUV urbano compatto",
+    c3:"Interni ben organizzati",
+    c4:"Motorizzazione ibrida economica",
+    v1:"Perfetta per la città",
+    v2:"Consumi contenuti",
+    v3:"Facile da guidare",
+    v4:"Ideale neopatentati"
+  },
+
+  en:{
+    c1:"Approximately 350-liter versatile trunk",
+    c2:"Compact urban SUV",
+    c3:"Well-organized interior",
+    c4:"Economical hybrid engine",
+    v1:"Perfect for the city",
+    v2:"Low fuel consumption",
+    v3:"Easy to drive",
+    v4:"Ideal for new drivers"
+  }
 },
 
 "Fiat Panda": {
   img: "foto auto/panda.jpg",
-  c1: "Bagagliaio da circa 200 litri compatto",
-  c2: "City car pratica",
-  c3: "Costi gestione bassissimi",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Perfetta piccoli spostamenti",
-  v2: "Facile parcheggio",
-  v3: "Economica",
-  v4: "Ideale seconda auto"
+
+  it:{
+    c1:"Bagagliaio da circa 200 litri compatto",
+    c2:"City car pratica",
+    c3:"Costi gestione bassissimi",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Perfetta piccoli spostamenti",
+    v2:"Facile parcheggio",
+    v3:"Economica",
+    v4:"Ideale seconda auto"
+  },
+
+  en:{
+    c1:"Approximately 200-liter compact trunk",
+    c2:"Practical city car",
+    c3:"Very low running costs",
+    c4:"Efficient hybrid engine",
+    v1:"Perfect for short trips",
+    v2:"Easy parking",
+    v3:"Economical",
+    v4:"Ideal as a second car"
+  }
 },
 
 "Fiat Grande Panda": {
   img: "foto auto/nuovapanda.jpg",
-  c1: "Bagagliaio da circa 330 litri pratico",
-  c2: "City SUV spazioso",
-  c3: "Interni funzionali",
-  c4: "Motorizzazione ibrida moderna",
-  v1: "Ottima uso quotidiano",
-  v2: "Consumi ridotti",
-  v3: "Perfetta famiglie",
-  v4: "Facile guida"
+
+  it:{
+    c1:"Bagagliaio da circa 330 litri pratico",
+    c2:"City SUV spazioso",
+    c3:"Interni funzionali",
+    c4:"Motorizzazione ibrida moderna",
+    v1:"Ottima uso quotidiano",
+    v2:"Consumi ridotti",
+    v3:"Perfetta famiglie",
+    v4:"Facile guida"
+  },
+
+  en:{
+    c1:"Approximately 330-liter practical trunk",
+    c2:"Spacious city SUV",
+    c3:"Functional interior",
+    c4:"Modern hybrid engine",
+    v1:"Excellent for daily use",
+    v2:"Reduced fuel consumption",
+    v3:"Perfect for families",
+    v4:"Easy driving experience"
+  }
 },
 
 "Ford Focus": {
   img: "foto auto/focus.jpg",
-  c1: "Bagagliaio da circa 360 litri equilibrato",
-  c2: "Berlina stabile e confortevole",
-  c3: "Ottima tenuta strada",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Perfetta autostrada",
-  v2: "Guida sicura",
-  v3: "Comfort viaggi",
-  v4: "Uso quotidiano"
+
+  it:{
+    c1:"Bagagliaio da circa 360 litri equilibrato",
+    c2:"Berlina stabile e confortevole",
+    c3:"Ottima tenuta strada",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Perfetta autostrada",
+    v2:"Guida sicura",
+    v3:"Comfort viaggi",
+    v4:"Uso quotidiano"
+  },
+
+  en:{
+    c1:"Approximately 360-liter balanced trunk",
+    c2:"Stable and comfortable sedan",
+    c3:"Excellent road handling",
+    c4:"Efficient hybrid engine",
+    v1:"Perfect for highway driving",
+    v2:"Safe driving experience",
+    v3:"Travel comfort",
+    v4:"Ideal for daily use"
+  }
 },
 
 "Ford Puma": {
   img: "foto auto/puma.jpg",
-  c1: "Bagagliaio da circa 420 litri intelligente",
-  c2: "SUV compatto dinamico",
-  c3: "Guida agile",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Versatile",
-  v2: "Spazio ottimizzato",
-  v3: "Facile città",
-  v4: "Ottimo compromesso"
+
+  it:{
+    c1:"Bagagliaio da circa 420 litri intelligente",
+    c2:"SUV compatto dinamico",
+    c3:"Guida agile",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Versatile",
+    v2:"Spazio ottimizzato",
+    v3:"Facile città",
+    v4:"Ottimo compromesso"
+  },
+
+  en:{
+    c1:"Approximately 420-liter smart trunk",
+    c2:"Dynamic compact SUV",
+    c3:"Agile driving experience",
+    c4:"Efficient hybrid engine",
+    v1:"Versatile",
+    v2:"Optimized space",
+    v3:"Easy for city driving",
+    v4:"Excellent all-around compromise"
+  }
 },
 
-
-	"Fiat Tipo": {
+"Fiat Tipo": {
   img: "foto auto/tipo.jpg",
-  c1: "Bagagliaio ampio e pratico per ogni esigenza",
-  c2: "Berlina versatile adatta alla famiglia",
-  c3: "Consumi ridotti e manutenzione economica",
-  c4: "Ottimo rapporto qualità prezzo",
-  v1: "Spaziosa e comoda per tutti i passeggeri",
-  v2: "Ideale sia per città che autostrada",
-  v3: "Semplice da guidare e affidabile",
-  v4: "Perfetta per chi cerca praticità quotidiana"
+
+  it:{
+    c1:"Bagagliaio ampio e pratico per ogni esigenza",
+    c2:"Berlina versatile adatta alla famiglia",
+    c3:"Consumi ridotti e manutenzione economica",
+    c4:"Ottimo rapporto qualità prezzo",
+    v1:"Spaziosa e comoda per tutti i passeggeri",
+    v2:"Ideale sia per città che autostrada",
+    v3:"Semplice da guidare e affidabile",
+    v4:"Perfetta per chi cerca praticità quotidiana"
+  },
+
+  en:{
+    c1:"Spacious and practical trunk for every need",
+    c2:"Versatile family-friendly sedan",
+    c3:"Low fuel consumption and affordable maintenance",
+    c4:"Excellent value for money",
+    v1:"Spacious and comfortable for all passengers",
+    v2:"Ideal for both city and highway driving",
+    v3:"Easy to drive and reliable",
+    v4:"Perfect for those seeking everyday practicality"
+  }
 },
 
-	
 "Ford Tourneo": {
   img: "foto auto/tourneo.jpg",
-  c1: "Bagagliaio oltre 650 litri molto ampio",
-  c2: "Veicolo spazioso modulabile",
-  c3: "Configurazione interna flessibile",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Perfetto famiglie numerose",
-  v2: "Grande capacità carico",
-  v3: "Versatile",
-  v4: "Ideale viaggi lunghi"
+
+  it:{
+    c1:"Bagagliaio oltre 650 litri molto ampio",
+    c2:"Veicolo spazioso modulabile",
+    c3:"Configurazione interna flessibile",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Perfetto famiglie numerose",
+    v2:"Grande capacità carico",
+    v3:"Versatile",
+    v4:"Ideale viaggi lunghi"
+  },
+
+  en:{
+    c1:"Over 650-liter very spacious trunk",
+    c2:"Spacious and modular vehicle",
+    c3:"Flexible interior configuration",
+    c4:"Efficient hybrid engine",
+    v1:"Perfect for large families",
+    v2:"Large cargo capacity",
+    v3:"Versatile",
+    v4:"Ideal for long trips"
+  }
 },
 
 "Hyundai i10": {
   img: "foto auto/i10.jpg",
-  c1: "Bagagliaio da circa 230 litri compatto",
-  c2: "City car agile",
-  c3: "Consumi contenuti",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Perfetta città",
-  v2: "Costi bassi",
-  v3: "Facile parcheggio",
-  v4: "Ideale quotidiano"
+
+  it:{
+    c1:"Bagagliaio da circa 230 litri compatto",
+    c2:"City car agile",
+    c3:"Consumi contenuti",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Perfetta città",
+    v2:"Costi bassi",
+    v3:"Facile parcheggio",
+    v4:"Ideale quotidiano"
+  },
+
+  en:{
+    c1:"Approximately 230-liter compact trunk",
+    c2:"Agile city car",
+    c3:"Low fuel consumption",
+    c4:"Efficient hybrid engine",
+    v1:"Perfect for the city",
+    v2:"Low running costs",
+    v3:"Easy parking",
+    v4:"Ideal for everyday use"
+  }
 },
 
 "Hyundai Kona": {
   img: "foto auto/kona.jpg",
-  c1: "Bagagliaio da circa 430 litri versatile",
-  c2: "SUV moderno",
-  c3: "Comfort elevato",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Tecnologica",
-  v2: "Ottima viaggi",
-  v3: "Versatile",
-  v4: "Comfort elevato"
+
+  it:{
+    c1:"Bagagliaio da circa 430 litri versatile",
+    c2:"SUV moderno",
+    c3:"Comfort elevato",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Tecnologica",
+    v2:"Ottima viaggi",
+    v3:"Versatile",
+    v4:"Comfort elevato"
+  },
+
+  en:{
+    c1:"Approximately 430-liter versatile trunk",
+    c2:"Modern SUV",
+    c3:"High comfort level",
+    c4:"Efficient hybrid engine",
+    v1:"Technological",
+    v2:"Excellent for travel",
+    v3:"Versatile",
+    v4:"High comfort"
+  }
 },
 
 "Jeep Avenger": {
   img: "foto auto/avenger.jpg",
-  c1: "Bagagliaio da circa 355-380 litri pratico",
-  c2: "SUV compatto moderno",
-  c3: "Guida alta e sicura",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Perfetta città",
-  v2: "Facile da guidare",
-  v3: "Stile distintivo",
-  v4: "Ideale urbano"
+
+  it:{
+    c1:"Bagagliaio da circa 355-380 litri pratico",
+    c2:"SUV compatto moderno",
+    c3:"Guida alta e sicura",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Perfetta città",
+    v2:"Facile da guidare",
+    v3:"Stile distintivo",
+    v4:"Ideale urbano"
+  },
+
+  en:{
+    c1:"Approximately 355-380-liter practical trunk",
+    c2:"Modern compact SUV",
+    c3:"High and safe driving position",
+    c4:"Efficient hybrid engine",
+    v1:"Perfect for the city",
+    v2:"Easy to drive",
+    v3:"Distinctive style",
+    v4:"Ideal for urban use"
+  }
 },
 
 "Jeep Compass": {
   img: "foto auto/compass.jpg",
-  c1: "Bagagliaio da circa 550 litri spazioso",
-  c2: "SUV robusto e versatile",
-  c3: "Adatto a ogni terreno",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Perfetto viaggi e avventura",
-  v2: "Spazio famiglia",
-  v3: "Versatile",
-  v4: "Comfort elevato"
+
+  it:{
+    c1:"Bagagliaio da circa 550 litri spazioso",
+    c2:"SUV robusto e versatile",
+    c3:"Adatto a ogni terreno",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Perfetto viaggi e avventura",
+    v2:"Spazio famiglia",
+    v3:"Versatile",
+    v4:"Comfort elevato"
+  },
+
+  en:{
+    c1:"Approximately 550-liter spacious trunk",
+    c2:"Robust and versatile SUV",
+    c3:"Suitable for every terrain",
+    c4:"Efficient hybrid engine",
+    v1:"Perfect for travel and adventure",
+    v2:"Family space",
+    v3:"Versatile",
+    v4:"High comfort"
+  }
 },
 
 "Jeep Renegade": {
   img: "foto auto/renegade.jpg",
-  c1: "Bagagliaio da circa 330 litri compatto",
-  c2: "SUV iconico",
-  c3: "Adatto a sterrati",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Divertente",
-  v2: "Compatta",
-  v3: "Stile Jeep",
-  v4: "Versatile"
+
+  it:{
+    c1:"Bagagliaio da circa 330 litri compatto",
+    c2:"SUV iconico",
+    c3:"Adatto a sterrati",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Divertente",
+    v2:"Compatta",
+    v3:"Stile Jeep",
+    v4:"Versatile"
+  },
+
+  en:{
+    c1:"Approximately 330-liter compact trunk",
+    c2:"Iconic SUV",
+    c3:"Suitable for off-road driving",
+    c4:"Efficient hybrid engine",
+    v1:"Fun to drive",
+    v2:"Compact",
+    v3:"Classic Jeep style",
+    v4:"Versatile"
+  }
 },
 
 "Mercedes Classe A": {
   img: "foto auto/cla.jpg",
-  c1: "Bagagliaio da circa 340 litri utile",
-  c2: "Compatta premium tecnologica",
-  c3: "Infotainment avanzato",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Lusso compatto",
-  v2: "Comfort elevato",
-  v3: "Qualità premium",
-  v4: "Perfetta città"
-},
 
+  it:{
+    c1:"Bagagliaio da circa 340 litri utile",
+    c2:"Compatta premium tecnologica",
+    c3:"Infotainment avanzato",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Lusso compatto",
+    v2:"Comfort elevato",
+    v3:"Qualità premium",
+    v4:"Perfetta per la città"
+  },
+
+  en:{
+    c1:"Approximately 340-liter practical trunk",
+    c2:"Premium compact car with advanced technology",
+    c3:"Advanced infotainment system",
+    c4:"Efficient hybrid engine",
+    v1:"Compact luxury",
+    v2:"High comfort",
+    v3:"Premium quality",
+    v4:"Perfect for city driving"
+  }
+},
 
 "Mercedes Classe B": {
   img: "foto auto/classe b.jpg",
-  c1: "Bagagliaio da circa 455 litri spazioso",
-  c2: "Monovolume compatta premium",
-  c3: "Interni comodi e tecnologici",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Comfort elevato",
-  v2: "Spazio interno ottimo",
-  v3: "Qualità premium",
-  v4: "Perfetta per famiglie"
-},
 
+  it:{
+    c1:"Bagagliaio da circa 455 litri spazioso",
+    c2:"Monovolume compatta premium",
+    c3:"Interni comodi e tecnologici",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Comfort elevato",
+    v2:"Spazio interno ottimo",
+    v3:"Qualità premium",
+    v4:"Perfetta per famiglie"
+  },
+
+  en:{
+    c1:"Approximately 455-liter spacious trunk",
+    c2:"Premium compact MPV",
+    c3:"Comfortable and technological interior",
+    c4:"Efficient hybrid engine",
+    v1:"High comfort",
+    v2:"Excellent interior space",
+    v3:"Premium quality",
+    v4:"Perfect for families"
+  }
+},
 
 "Mercedes Classe C": {
   img: "foto auto/clc.jpg",
-  c1: "Bagagliaio da circa 420 litri capiente",
-  c2: "Berlina elegante",
-  c3: "Guida fluida e silenziosa",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Perfetta rappresentanza",
-  v2: "Comfort elevato",
-  v3: "Silenziosa",
-  v4: "Ideale viaggi"
+
+  it:{
+    c1:"Bagagliaio da circa 420 litri capiente",
+    c2:"Elegant sedan",
+    c3:"Smooth and quiet driving",
+    c4:"Efficient hybrid engine",
+    v1:"Perfetta rappresentanza",
+    v2:"Comfort elevato",
+    v3:"Silenziosa",
+    v4:"Ideale per viaggi"
+  },
+
+  en:{
+    c1:"Approximately 420-liter spacious trunk",
+    c2:"Elegant sedan",
+    c3:"Smooth and quiet driving",
+    c4:"Efficient hybrid engine",
+    v1:"Perfect for executive use",
+    v2:"High comfort",
+    v3:"Quiet ride",
+    v4:"Ideal for travel"
+  }
 },
 
-	"Mercedes Classe E": {
+"Mercedes Classe E": {
   img: "foto auto/e200.jpg",
-  c1: "Bagagliaio spazioso ideale per viaggi e famiglia",
-  c2: "Berlina premium elegante e raffinata",
-  c3: "Comfort elevato anche nei lunghi tragitti",
-  c4: "Motorizzazione efficiente con consumi contenuti",
-  v1: "Interni lussuosi e tecnologici",
-  v2: "Perfetta per lavoro e rappresentanza",
-  v3: "Guida fluida e silenziosa",
-  v4: "Massimo comfort per conducente e passeggeri"
+
+  it:{
+    c1:"Bagagliaio da circa 540 litri spazioso e ideale per viaggi e famiglia",
+    c2:"Berlina premium elegante e raffinata",
+    c3:"Comfort elevato anche nei lunghi tragitti",
+    c4:"Motorizzazione efficiente con consumi contenuti",
+    v1:"Interni lussuosi e tecnologici",
+    v2:"Perfetta per lavoro e rappresentanza",
+    v3:"Guida fluida e silenziosa",
+    v4:"Massimo comfort per conducente e passeggeri"
+  },
+
+  en:{
+    c1:"Approximately 540-liter spacious trunk ideal for travel and family use",
+    c2:"Elegant and refined premium sedan",
+    c3:"High comfort even on long journeys",
+    c4:"Efficient engine with low fuel consumption",
+    v1:"Luxury and technological interior",
+    v2:"Perfect for business and executive use",
+    v3:"Smooth and quiet driving",
+    v4:"Maximum comfort for driver and passengers"
+  }
 },
-	
+
 "Mercedes GLA": {
   img: "foto auto/gla.jpg",
-  c1: "Bagagliaio da circa 435 litri capiente",
-  c2: "SUV compatto premium",
-  c3: "Guida alta e sicura",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Comfort elevato",
-  v2: "Tecnologia avanzata",
-  v3: "Design elegante",
-  v4: "Ottimo uso quotidiano"
+
+  it:{
+    c1:"Bagagliaio da circa 435 litri capiente",
+    c2:"SUV compatto premium",
+    c3:"Guida alta e sicura",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Comfort elevato",
+    v2:"Tecnologia avanzata",
+    v3:"Design elegante",
+    v4:"Ottimo uso quotidiano"
+  },
+
+  en:{
+    c1:"Approximately 435-liter spacious trunk",
+    c2:"Premium compact SUV",
+    c3:"High driving position and safety",
+    c4:"Efficient hybrid engine",
+    v1:"High comfort",
+    v2:"Advanced technology",
+    v3:"Elegant design",
+    v4:"Great for daily use"
+  }
 },
 
 "Mercedes GLB": {
   img: "foto auto/glb.jpg",
-  c1: "Bagagliaio da circa 570 litri molto ampio",
-  c2: "SUV spazioso",
-  c3: "Interni modulari",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Perfetto famiglie",
-  v2: "Grande spazio",
-  v3: "Versatile",
-  v4: "Ideale viaggi lunghi"
+
+  it:{
+    c1:"Bagagliaio da circa 570 litri molto ampio",
+    c2:"SUV spazioso",
+    c3:"Interni modulari",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Perfetto per famiglie",
+    v2:"Grande spazio",
+    v3:"Versatile",
+    v4:"Ideale viaggi lunghi"
+  },
+
+  en:{
+    c1:"Approximately 570-liter very spacious trunk",
+    c2:"Spacious SUV",
+    c3:"Modular interior",
+    c4:"Efficient hybrid engine",
+    v1:"Perfect for families",
+    v2:"Large space",
+    v3:"Versatile",
+    v4:"Ideal for long trips"
+  }
 },
-
-
-
-
 
 "Mercedes GLC": {
   img: "foto auto/glc.jpg",
-  c1: "Bagagliaio da circa 550 litri ampio",
-  c2: "SUV premium spazioso",
-  c3: "Comfort elevato",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Perfetto famiglia",
-  v2: "Lusso",
-  v3: "Viaggi comodi",
-  v4: "Guida sicura"
+
+  it:{
+    c1:"Bagagliaio da circa 550 litri ampio",
+    c2:"SUV premium spazioso",
+    c3:"Comfort elevato",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Perfetto per famiglie",
+    v2:"Lusso",
+    v3:"Viaggi comodi",
+    v4:"Guida sicura"
+  },
+
+  en:{
+    c1:"Approximately 550-liter spacious trunk",
+    c2:"Premium spacious SUV",
+    c3:"High comfort",
+    c4:"Efficient hybrid engine",
+    v1:"Perfect for families",
+    v2:"Luxury",
+    v3:"Comfortable travel",
+    v4:"Safe driving"
+  }
 },
 
 "MG 3": {
   img: "foto auto/mg 3.jpg",
-  c1: "Bagagliaio da circa 270 litri compatto",
-  c2: "City car semplice",
-  c3: "Consumi contenuti",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Prezzo conveniente",
-  v2: "Facile guida",
-  v3: "Perfetta città",
-  v4: "Costi bassi"
+
+  it:{
+    c1:"Bagagliaio da circa 270 litri compatto",
+    c2:"City car semplice",
+    c3:"Consumi contenuti",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Prezzo conveniente",
+    v2:"Facile guida",
+    v3:"Perfetta per la città",
+    v4:"Costi bassi"
+  },
+
+  en:{
+    c1:"Approximately 270-liter compact trunk",
+    c2:"Simple city car",
+    c3:"Low fuel consumption",
+    c4:"Efficient hybrid engine",
+    v1:"Affordable price",
+    v2:"Easy driving",
+    v3:"Perfect for the city",
+    v4:"Low running costs"
+  }
 },
 
 "MG HS": {
   img: "foto auto/mg hs.jpg",
-  c1: "Bagagliaio da circa 430 litri spazioso",
-  c2: "SUV confortevole",
-  c3: "Interni ampi",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Ottimo qualità prezzo",
-  v2: "Spaziosa",
-  v3: "Tecnologica",
-  v4: "Comfort viaggi"
+
+  it:{
+    c1:"Bagagliaio da circa 430 litri spazioso",
+    c2:"SUV confortevole",
+    c3:"Interni ampi",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Ottimo qualità prezzo",
+    v2:"Spaziosa",
+    v3:"Tecnologica",
+    v4:"Comfort viaggi"
+  },
+
+  en:{
+    c1:"Approximately 430-liter spacious trunk",
+    c2:"Comfortable SUV",
+    c3:"Spacious interior",
+    c4:"Efficient hybrid engine",
+    v1:"Great value for money",
+    v2:"Spacious",
+    v3:"Technological",
+    v4:"Travel comfort"
+  }
 },
 
 "MG ZS": {
   img: "foto auto/mg zs.jpg",
-  c1: "Bagagliaio da circa 420 litri pratico",
-  c2: "SUV compatto accessibile",
-  c3: "Guida semplice",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Prezzo competitivo",
-  v2: "Spazioso",
-  v3: "Facile guida",
-  v4: "Ideale quotidiano"
+
+  it:{
+    c1:"Bagagliaio da circa 420 litri pratico",
+    c2:"SUV compatto accessibile",
+    c3:"Guida semplice",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Prezzo competitivo",
+    v2:"Spazioso",
+    v3:"Facile guida",
+    v4:"Ideale quotidiano"
+  },
+
+  en:{
+    c1:"Approximately 420-liter practical trunk",
+    c2:"Affordable compact SUV",
+    c3:"Easy driving",
+    c4:"Efficient hybrid engine",
+    v1:"Competitive price",
+    v2:"Spacious",
+    v3:"Easy to drive",
+    v4:"Ideal for daily use"
+  }
 },
 
 "Opel Corsa": {
   img: "foto auto/corsa.jpg",
-  c1: "Bagagliaio da circa 290 litri utile",
-  c2: "City car moderna",
-  c3: "Qualità solida",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Economica",
-  v2: "Agile città",
-  v3: "Affidabile",
-  v4: "Perfetta urbano"
+
+  it:{
+    c1:"Bagagliaio da circa 290 litri utile",
+    c2:"City car moderna",
+    c3:"Qualità solida",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Economica",
+    v2:"Agile in città",
+    v3:"Affidabile",
+    v4:"Perfetta per uso urbano"
+  },
+
+  en:{
+    c1:"Approximately 290-liter practical trunk",
+    c2:"Modern city car",
+    c3:"Solid build quality",
+    c4:"Efficient hybrid engine",
+    v1:"Economical",
+    v2:"Agile in the city",
+    v3:"Reliable",
+    v4:"Perfect for urban use"
+  }
 },
 
-
-  "Opel Frontera": {
+"Opel Frontera": {
   img: "foto auto/frontera.jpg",
-  c1: "Bagagliaio molto ampio da circa 460–500 litri",
-  c2: "SUV robusto e spazioso",
-  c3: "Buon comfort di guida anche su lunghe distanze",
-  c4: "Disponibile anche in versione elettrificata",
-  v1: "Ideale per famiglia e viaggi lunghi",
-  v2: "Grande spazio interno",
-  v3: "Versatile anche su strade miste",
-  v4: "Buon rapporto qualità/prezzo"
+
+  it:{
+    c1:"Bagagliaio da circa 460–500 litri molto ampio",
+    c2:"SUV robusto e spazioso",
+    c3:"Comfort elevato nei lunghi viaggi",
+    c4:"Disponibile anche in versione elettrificata",
+    v1:"Ideale per famiglia e viaggi lunghi",
+    v2:"Grande spazio interno",
+    v3:"Versatile su strade miste",
+    v4:"Ottimo rapporto qualità/prezzo"
+  },
+
+  en:{
+    c1:"Approximately 460–500 liter large trunk",
+    c2:"Robust and spacious SUV",
+    c3:"High comfort on long journeys",
+    c4:"Also available in electrified version",
+    v1:"Ideal for families and long trips",
+    v2:"Large interior space",
+    v3:"Versatile on mixed roads",
+    v4:"Great value for money"
+  }
 },
 
-  
 "Peugeot 208": {
   img: "foto auto/208.jpg",
-  c1: "Bagagliaio da circa 290 litri compatto",
-  c2: "City car moderna",
-  c3: "Consumi contenuti",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Perfetta città",
-  v2: "Tecnologica",
-  v3: "Agile",
-  v4: "Qualità prezzo"
+
+  it:{
+    c1:"Bagagliaio da circa 290 litri compatto",
+    c2:"City car moderna",
+    c3:"Consumi contenuti",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Perfetta per la città",
+    v2:"Tecnologica",
+    v3:"Agile",
+    v4:"Ottimo rapporto qualità/prezzo"
+  },
+
+  en:{
+    c1:"Approximately 290-liter compact trunk",
+    c2:"Modern city car",
+    c3:"Low fuel consumption",
+    c4:"Efficient hybrid engine",
+    v1:"Perfect for the city",
+    v2:"Technological",
+    v3:"Agile",
+    v4:"Great value for money"
+  }
 },
-
-
 
 "Peugeot 308": {
   img: "foto auto/308.jpg",
-  c1: "Bagagliaio da circa 412 litri ampio e modulare",
-  c2: "Design elegante e tecnologico con fari Full LED",
-  c3: "Guida precisa e dinamica",
-  c4: "Motorizzazioni benzina, diesel e ibride",
-  v1: "Comfort elevato",
-  v2: "Tecnologia avanzata di bordo",
-  v3: "Spaziosa per la categoria",
-  v4: "Piacere di guida"
+
+  it:{
+    c1:"Bagagliaio da circa 412 litri ampio e modulabile",
+    c2:"Design elegante e tecnologico",
+    c3:"Guida precisa e dinamica",
+    c4:"Motorizzazioni benzina, diesel e ibride",
+    v1:"Comfort elevato",
+    v2:"Tecnologia avanzata",
+    v3:"Spaziosa per la categoria",
+    v4:"Piacere di guida"
+  },
+
+  en:{
+    c1:"Approximately 412-liter large and modular trunk",
+    c2:"Elegant and technological design",
+    c3:"Precise and dynamic driving",
+    c4:"Petrol, diesel and hybrid engines",
+    v1:"High comfort",
+    v2:"Advanced technology",
+    v3:"Spacious for its class",
+    v4:"Driving pleasure"
+  }
 },
-
-
-
 
 "Peugeot 2008": {
   img: "foto auto/2008.jpg",
-  c1: "Bagagliaio da circa 400 litri comodo",
-  c2: "SUV compatto elegante",
-  c3: "Interni tecnologici",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Comfort",
-  v2: "Tecnologia",
-  v3: "Design moderno",
-  v4: "Versatile"
+
+  it:{
+    c1:"Bagagliaio da circa 400 litri comodo",
+    c2:"SUV compatto elegante",
+    c3:"Interni tecnologici",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Comfort",
+    v2:"Tecnologia",
+    v3:"Design moderno",
+    v4:"Versatile"
+  },
+
+  en:{
+    c1:"Approximately 400-liter practical trunk",
+    c2:"Stylish compact SUV",
+    c3:"Technological interior",
+    c4:"Efficient hybrid engine",
+    v1:"Comfort",
+    v2:"Technology",
+    v3:"Modern design",
+    v4:"Versatile"
+  }
 },
-
-
-
 
 "Peugeot 3008": {
   img: "foto auto/3008.jpg",
-  c1: "Bagagliaio da circa 520-590 litri molto capiente",
-  c2: "SUV compatto elegante e moderno",
-  c3: "Interni tecnologici con i-Cockpit",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Comfort elevato",
-  v2: "Tecnologia avanzata",
-  v3: "Spazio ideale famiglia",
-  v4: "Ottimo per viaggi lunghi"
-},
 
+  it:{
+    c1:"Bagagliaio da circa 520–590 litri molto capiente",
+    c2:"SUV elegante e moderno",
+    c3:"Interni tecnologici con i-Cockpit",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Comfort elevato",
+    v2:"Tecnologia avanzata",
+    v3:"Perfetta per famiglia",
+    v4:"Ideale per viaggi lunghi"
+  },
+
+  en:{
+    c1:"Approximately 520–590 liter large trunk",
+    c2:"Elegant and modern SUV",
+    c3:"High-tech interior with i-Cockpit",
+    c4:"Efficient hybrid engine",
+    v1:"High comfort",
+    v2:"Advanced technology",
+    v3:"Great for families",
+    v4:"Ideal for long trips"
+  }
+},
 
 "Peugeot 5008": {
   img: "foto auto/5008.jpg",
-  c1: "Bagagliaio da circa 700 litri molto ampio",
-  c2: "SUV 7 posti",
-  c3: "Interni modulabili",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Perfetto famiglie numerose",
-  v2: "Grande spazio",
-  v3: "Versatile",
-  v4: "Viaggi lunghi"
-},
 
+  it:{
+    c1:"Bagagliaio da circa 700 litri molto ampio",
+    c2:"SUV a 7 posti",
+    c3:"Interni modulabili",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Perfetto per famiglie numerose",
+    v2:"Grande spazio",
+    v3:"Versatile",
+    v4:"Ideale per viaggi lunghi"
+  },
+
+  en:{
+    c1:"Approximately 700-liter very large trunk",
+    c2:"7-seater SUV",
+    c3:"Modular interior",
+    c4:"Efficient hybrid engine",
+    v1:"Perfect for large families",
+    v2:"Huge space",
+    v3:"Versatile",
+    v4:"Ideal for long trips"
+  }
+},
 
 "Renault Austral": {
   img: "foto auto/austral.jpg",
-  c1: "Bagagliaio da circa 460 litri capiente",
-  c2: "SUV tecnologico",
-  c3: "Interni digitali",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Comfort viaggi",
-  v2: "Spazioso",
-  v3: "Consumi ridotti",
-  v4: "Ideale famiglia"
-},
 
+  it:{
+    c1:"Bagagliaio da circa 460 litri capiente",
+    c2:"SUV tecnologico",
+    c3:"Interni digitali",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Comfort nei viaggi",
+    v2:"Spazioso",
+    v3:"Consumi ridotti",
+    v4:"Ideale per famiglie"
+  },
+
+  en:{
+    c1:"Approximately 460-liter spacious trunk",
+    c2:"Technological SUV",
+    c3:"Digital interior",
+    c4:"Efficient hybrid engine",
+    v1:"Travel comfort",
+    v2:"Spacious",
+    v3:"Low fuel consumption",
+    v4:"Ideal for families"
+  }
+},
 
 "Renault Captur": {
   img: "foto auto/captur.jpg",
-  c1: "Bagagliaio da circa 390 litri modulabile",
-  c2: "SUV compatto",
-  c3: "Interni confortevoli",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Economico",
-  v2: "Pratico",
-  v3: "Design moderno",
-  v4: "Ideale famiglie"
+
+  it:{
+    c1:"Bagagliaio da circa 390 litri modulabile",
+    c2:"SUV compatto",
+    c3:"Interni confortevoli",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Economico",
+    v2:"Pratico",
+    v3:"Design moderno",
+    v4:"Ideale per famiglie"
+  },
+
+  en:{
+    c1:"Approximately 390-liter modular trunk",
+    c2:"Compact SUV",
+    c3:"Comfortable interior",
+    c4:"Efficient hybrid engine",
+    v1:"Economical",
+    v2:"Practical",
+    v3:"Modern design",
+    v4:"Ideal for families"
+  }
 },
-
-
 
 "Renault Clio": {
   img: "foto auto/clio.jpg",
-  c1: "Bagagliaio da circa 280 litri utile",
-  c2: "City car equilibrata",
-  c3: "Consumi bassi",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Economica",
-  v2: "Facile guida",
-  v3: "Affidabile",
-  v4: "Perfetta quotidiano"
+
+  it:{
+    c1:"Bagagliaio da circa 280 litri utile",
+    c2:"City car equilibrata",
+    c3:"Consumi bassi",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Economica",
+    v2:"Facile da guidare",
+    v3:"Affidabile",
+    v4:"Perfetta per uso quotidiano"
+  },
+
+  en:{
+    c1:"Approximately 280-liter practical trunk",
+    c2:"Balanced city car",
+    c3:"Low fuel consumption",
+    c4:"Efficient hybrid engine",
+    v1:"Economical",
+    v2:"Easy to drive",
+    v3:"Reliable",
+    v4:"Perfect for daily use"
+  }
 },
 
 "Renault Espace": {
   img: "foto auto/espace.jpg",
-  c1: "Bagagliaio da circa 650 litri molto ampio",
-  c2: "SUV 7 posti",
-  c3: "Interni spaziosi",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Perfetto famiglia numerosa",
-  v2: "Comfort viaggi",
-  v3: "Versatile",
-  v4: "Ideale vacanze"
-},
 
+  it:{
+    c1:"Bagagliaio da circa 650 litri molto ampio",
+    c2:"SUV a 7 posti",
+    c3:"Interni spaziosi",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Perfetto per famiglie numerose",
+    v2:"Comfort nei viaggi",
+    v3:"Versatile",
+    v4:"Ideale per vacanze"
+  },
+
+  en:{
+    c1:"Approximately 650-liter very large trunk",
+    c2:"7-seater SUV",
+    c3:"Spacious interior",
+    c4:"Efficient hybrid engine",
+    v1:"Perfect for large families",
+    v2:"Travel comfort",
+    v3:"Versatile",
+    v4:"Ideal for holidays"
+  }
+},
 
 "Renault Rafale": {
   img: "foto auto/rafale.jpg",
-  c1: "Bagagliaio da circa 530 litri capiente",
-  c2: "SUV coupé sportivo",
-  c3: "Design moderno e aggressivo",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Stile distintivo",
-  v2: "Prestazioni elevate",
-  v3: "Tecnologia avanzata",
-  v4: "Ideale per chi cerca sportività"
-},
 
+  it:{
+    c1:"Bagagliaio da circa 530 litri capiente",
+    c2:"SUV coupé sportivo",
+    c3:"Design moderno e aggressivo",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Stile distintivo",
+    v2:"Prestazioni elevate",
+    v3:"Tecnologia avanzata",
+    v4:"Sportività e comfort"
+  },
+
+  en:{
+    c1:"Approximately 530-liter spacious trunk",
+    c2:"Sporty coupe SUV",
+    c3:"Modern and aggressive design",
+    c4:"Efficient hybrid engine",
+    v1:"Distinctive style",
+    v2:"High performance",
+    v3:"Advanced technology",
+    v4:"Sportiness and comfort"
+  }
+},
 
 "Renault Symbioz": {
   img: "foto auto/symbioz.jpg",
-  c1: "Bagagliaio da circa 440 litri capiente",
-  c2: "SUV moderno",
-  c3: "Interni evoluti",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Tecnologica",
-  v2: "Consumi ridotti",
-  v3: "Comfort",
-  v4: "Ottimo compromesso"
-},
 
+  it:{
+    c1:"Bagagliaio da circa 440 litri capiente",
+    c2:"SUV moderno",
+    c3:"Interni evoluti",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Tecnologica",
+    v2:"Consumi ridotti",
+    v3:"Comfort",
+    v4:"Ottimo compromesso"
+  },
+
+  en:{
+    c1:"Approximately 440-liter spacious trunk",
+    c2:"Modern SUV",
+    c3:"Advanced interior",
+    c4:"Efficient hybrid engine",
+    v1:"Technological",
+    v2:"Low consumption",
+    v3:"Comfort",
+    v4:"Great compromise"
+  }
+},
 
 "Seat Arona": {
   img: "foto auto/arona.jpg",
-  c1: "Bagagliaio da circa 400 litri pratico",
-  c2: "SUV compatto urbano",
-  c3: "Guida agile e facile",
-  c4: "Motorizzazione efficiente",
-  v1: "Perfetta città",
-  v2: "Facile parcheggio",
-  v3: "Buon comfort",
-  v4: "Ottimo rapporto qualità prezzo"
-},
 
+  it:{
+    c1:"Bagagliaio da circa 400 litri pratico",
+    c2:"SUV compatto urbano",
+    c3:"Guida agile e facile",
+    c4:"Motorizzazione efficiente",
+    v1:"Perfetta città",
+    v2:"Facile parcheggio",
+    v3:"Buon comfort",
+    v4:"Ottimo rapporto qualità/prezzo"
+  },
+
+  en:{
+    c1:"Approximately 400-liter practical trunk",
+    c2:"Urban compact SUV",
+    c3:"Easy and agile driving",
+    c4:"Efficient engine",
+    v1:"Perfect for city",
+    v2:"Easy parking",
+    v3:"Good comfort",
+    v4:"Great value for money"
+  }
+},
 
 "Skoda Fabia": {
   img: "foto auto/fabia.jpg",
-  c1: "Bagagliaio da circa 350 litri spazioso",
-  c2: "City car solida",
-  c3: "Qualità elevata",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Spaziosa",
-  v2: "Economica",
-  v3: "Affidabile",
-  v4: "Perfetta quotidiano"
+
+  it:{
+    c1:"Bagagliaio da circa 350 litri spazioso",
+    c2:"City car solida",
+    c3:"Qualità elevata",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Spaziosa",
+    v2:"Economica",
+    v3:"Affidabile",
+    v4:"Perfetta per uso quotidiano"
+  },
+
+  en:{
+    c1:"Approximately 350-liter spacious trunk",
+    c2:"Solid city car",
+    c3:"High build quality",
+    c4:"Efficient hybrid engine",
+    v1:"Spacious",
+    v2:"Economical",
+    v3:"Reliable",
+    v4:"Perfect for daily use"
+  }
 },
 
 "Skoda Kamiq": {
   img: "foto auto/kamiq.jpg",
-  c1: "Bagagliaio da circa 380 litri pratico",
-  c2: "SUV compatto",
-  c3: "Interni spaziosi",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Ottimo spazio",
-  v2: "Comfort",
-  v3: "Prezzo competitivo",
-  v4: "Ideale famiglia"
+
+  it:{
+    c1:"Bagagliaio da circa 380 litri pratico",
+    c2:"SUV compatto",
+    c3:"Interni spaziosi",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Ottimo spazio",
+    v2:"Comfort",
+    v3:"Prezzo competitivo",
+    v4:"Ideale per famiglie"
+  },
+
+  en:{
+    c1:"Approximately 380-liter practical trunk",
+    c2:"Compact SUV",
+    c3:"Spacious interior",
+    c4:"Efficient hybrid engine",
+    v1:"Great space",
+    v2:"Comfort",
+    v3:"Competitive price",
+    v4:"Ideal for families"
+  }
 },
 
 "Skoda Karoq": {
   img: "foto auto/karoq.jpg",
-  c1: "Bagagliaio da circa 480 litri capiente",
-  c2: "SUV medio solido",
-  c3: "Abitacolo spazioso",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Spazio famiglia",
-  v2: "Affidabile",
-  v3: "Comfort",
-  v4: "Ottimo qualità prezzo"
+
+  it:{
+    c1:"Bagagliaio da circa 480 litri capiente",
+    c2:"SUV medio solido",
+    c3:"Abitacolo spazioso",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Spazio famiglia",
+    v2:"Affidabile",
+    v3:"Comfort",
+    v4:"Ottimo qualità/prezzo"
+  },
+
+  en:{
+    c1:"Approximately 480-liter spacious trunk",
+    c2:"Solid mid-size SUV",
+    c3:"Spacious cabin",
+    c4:"Efficient hybrid engine",
+    v1:"Family space",
+    v2:"Reliable",
+    v3:"Comfort",
+    v4:"Great value for money"
+  }
 },
 
 "Volkswagen Polo": {
   img: "foto auto/polo.jpg",
-  c1: "Bagagliaio da circa 330 litri pratico",
-  c2: "City car solida",
-  c3: "Qualità elevata",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Affidabile",
-  v2: "Comfort",
-  v3: "Guida sicura",
-  v4: "Perfetta quotidiano"
+
+  it:{
+    c1:"Bagagliaio da circa 330 litri pratico",
+    c2:"City car solida",
+    c3:"Qualità elevata",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Affidabile",
+    v2:"Comfort",
+    v3:"Guida sicura",
+    v4:"Perfetta quotidiano"
+  },
+
+  en:{
+    c1:"Approximately 330-liter practical trunk",
+    c2:"Solid city car",
+    c3:"High build quality",
+    c4:"Efficient hybrid engine",
+    v1:"Reliable",
+    v2:"Comfort",
+    v3:"Safe driving",
+    v4:"Perfect for daily use"
+  }
 },
 
 "Volkswagen T-Cross": {
   img: "foto auto/tcross.jpg",
-  c1: "Bagagliaio da circa 420 litri versatile",
-  c2: "SUV compatto pratico",
-  c3: "Sedili modulabili",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Spazio ottimizzato",
-  v2: "Versatile",
-  v3: "Comfort",
-  v4: "Perfetto famiglia"
+
+  it:{
+    c1:"Bagagliaio da circa 420 litri versatile",
+    c2:"SUV compatto pratico",
+    c3:"Sedili modulabili",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Spazio ottimizzato",
+    v2:"Versatile",
+    v3:"Comfort",
+    v4:"Perfetto per famiglie"
+  },
+
+  en:{
+    c1:"Approximately 420-liter versatile trunk",
+    c2:"Practical compact SUV",
+    c3:"Adjustable seats",
+    c4:"Efficient hybrid engine",
+    v1:"Optimized space",
+    v2:"Versatile",
+    v3:"Comfort",
+    v4:"Perfect for families"
+  }
 },
 
 "Volkswagen T-Roc": {
   img: "foto auto/troc.jpg",
-  c1: "Bagagliaio da circa 410 litri comodo",
-  c2: "SUV compatto moderno",
-  c3: "Qualità Volkswagen",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Stile apprezzato",
-  v2: "Guida stabile",
-  v3: "Comfort",
-  v4: "Ottimo quotidiano"
+
+  it:{
+    c1:"Bagagliaio da circa 410 litri comodo",
+    c2:"SUV compatto moderno",
+    c3:"Qualità Volkswagen",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Stile apprezzato",
+    v2:"Guida stabile",
+    v3:"Comfort",
+    v4:"Ottimo quotidiano"
+  },
+
+  en:{
+    c1:"Approximately 410-liter practical trunk",
+    c2:"Modern compact SUV",
+    c3:"Volkswagen quality",
+    c4:"Efficient hybrid engine",
+    v1:"Stylish",
+    v2:"Stable driving",
+    v3:"Comfort",
+    v4:"Great for daily use"
+  }
 },
 
 "Volkswagen Taigo": {
   img: "foto auto/taigo.jpg",
-  c1: "Bagagliaio da circa 410 litri pratico",
-  c2: "SUV coupé sportivo",
-  c3: "Design moderno",
-  c4: "Motorizzazione ibrida efficiente",
-  v1: "Design distintivo",
-  v2: "Comfort",
-  v3: "Consumi contenuti",
-  v4: "Perfetto urbano"
-}
-};
+
+  it:{
+    c1:"Bagagliaio da circa 410 litri pratico",
+    c2:"SUV coupé sportivo",
+    c3:"Design moderno",
+    c4:"Motorizzazione ibrida efficiente",
+    v1:"Design distintivo",
+    v2:"Comfort",
+    v3:"Consumi contenuti",
+    v4:"Perfetto urbano"
+  },
+
+  en:{
+    c1:"Approximately 410-liter practical trunk",
+    c2:"Sporty coupe SUV",
+    c3:"Modern design",
+    c4:"Efficient hybrid engine",
+    v1:"Distinctive design",
+    v2:"Comfort",
+    v3:"Low consumption",
+    v4:"Perfect for city use"
+  }
+}};
+
 
 // Popola menu
 const s1 = document.getElementById("auto1");
@@ -874,21 +1591,25 @@ function aggiorna() {
   const a = auto[s1.value] || auto["Seleziona Auto"];
   const b = auto[s2.value] || auto["Seleziona Auto"];
 
+const datiA = a[lingua] || a;
+const datiB = b[lingua] || b;
+
+
   // =====================
   // CARD 1
   // =====================
   document.getElementById("nome1").innerText =
     s1.value || "Seleziona Auto";
 
-  document.getElementById("c1a").innerText = a.c1;
-  document.getElementById("c2a").innerText = a.c2;
-  document.getElementById("c3a").innerText = a.c3;
-  document.getElementById("c4a").innerText = a.c4;
+document.getElementById("c1a").innerText = datiA.c1;
+document.getElementById("c2a").innerText = datiA.c2;
+document.getElementById("c3a").innerText = datiA.c3;
+document.getElementById("c4a").innerText = datiA.c4;
 
-  document.getElementById("v1a").innerText = a.v1;
-  document.getElementById("v2a").innerText = a.v2;
-  document.getElementById("v3a").innerText = a.v3;
-  document.getElementById("v4a").innerText = a.v4;
+document.getElementById("v1a").innerText = datiA.v1;
+document.getElementById("v2a").innerText = datiA.v2;
+document.getElementById("v3a").innerText = datiA.v3;
+document.getElementById("v4a").innerText = datiA.v4;
 
   const logo1 = document.getElementById("logo1");
   const img1 = document.getElementById("img1");
@@ -908,15 +1629,15 @@ function aggiorna() {
   document.getElementById("nome2").innerText =
     s2.value || "Seleziona Auto";
 
-  document.getElementById("c1b").innerText = b.c1;
-  document.getElementById("c2b").innerText = b.c2;
-  document.getElementById("c3b").innerText = b.c3;
-  document.getElementById("c4b").innerText = b.c4;
+  document.getElementById("c1b").innerText = datiB.c1;
+document.getElementById("c2b").innerText = datiB.c2;
+document.getElementById("c3b").innerText = datiB.c3;
+document.getElementById("c4b").innerText = datiB.c4;
 
-  document.getElementById("v1b").innerText = b.v1;
-  document.getElementById("v2b").innerText = b.v2;
-  document.getElementById("v3b").innerText = b.v3;
-  document.getElementById("v4b").innerText = b.v4;
+document.getElementById("v1b").innerText = datiB.v1;
+document.getElementById("v2b").innerText = datiB.v2;
+document.getElementById("v3b").innerText = datiB.v3;
+document.getElementById("v4b").innerText = datiB.v4;
 
   const logo2 = document.getElementById("logo2");
   const img2 = document.getElementById("img2");
@@ -933,63 +1654,23 @@ function aggiorna() {
 
 
 
-function googleTranslateElementInit() {
 
-  new google.translate.TranslateElement(
+function cambiaLingua(lang){
 
-    {
+  lingua = lang;
 
-      pageLanguage: 'it',
-
-      includedLanguages: 'en,it',
-
-      autoDisplay: false
-
-    },
-
-    'google_translate_element'
-
-  );
-
+  aggiorna();
 }
-
-function translateToEnglish() {
-
-  const select = document.querySelector(".goog-te-combo");
-
-  if (select) {
-
-    select.value = "en";
-
-    select.dispatchEvent(new Event("change"));
-
-  }
-
-}
-
-
       
 
 </script>
 
-<!-- Bandiera UK -->
-
-<button onclick="translateToEnglish()" 
-
-style="border:none;background:none;cursor:pointer;font-size:30px;">
-
-🇬🇧
-
-</button>
-
-<!-- Google Translate nascosto -->
-
-<div id="google_translate_element" style="display:none;"></div>
-
-
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <div class="logo">
+
+<button onclick="cambiaLingua('it')">🇮🇹</button>
+<button onclick="cambiaLingua('en')">🇬🇧</button>
+
   <img src="foto auto/logo.jpg" alt="Logo">
 </div> 
 
