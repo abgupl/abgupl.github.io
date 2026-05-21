@@ -14,16 +14,12 @@ font-size:18px;			border-bottom:1px solid lightcoral; /* modello macchina */
 }
 
 
-.lingue img{
-  width:40px;
-  height:auto;
-  cursor:pointer;
-}
 
 
-.img-box {  				 border:0px solid red; /* modello macchina */
+
+.img-box {  				 border:1logopx solid red; /* modello macchina */
   width: 100%;
-  height:300px;
+  height:280px;
   overflow: hidden;   /* taglia le parti in eccesso */
   border-radius: 8px;
   display: flex;
@@ -41,6 +37,38 @@ padding-top:5px;
 }
 
 
+#logo2{
+  width: 50%;
+  height: auto;
+}
+
+.logo button{
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+border-radius:10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+margin-top:0.5%;
+}
+
+.logo button:hover{
+  background: #ccc;
+}
+
+
+#bandiera{  width: clamp(50px, 4vw, 80px);	
+	object-fit: cover;}
+
+
+#logo1{
+  width: 50%;
+  height: auto;
+}
+
+
 .logo {
   text-align: center;
 				
@@ -54,8 +82,8 @@ margin-bottom:30px
 
 
 .logo img {
-  width: 32%;  /* puoi cambiare dimensione */
-  height: auto;padding:1.5%; 
+  width: 20%;  /* puoi cambiare dimensione */
+  height: auto;padding-top:0.8%; 
 margin:0 auto; 
 display: block;
 }
@@ -80,7 +108,7 @@ h1 {
   display: flex;
   justify-content: center; 	
   margin-bottom: 0.5%;
-  margin-top:0.5%;   
+  margin-top:0.8%;   
 
 
 gap: clamp(2px, 2vw, 4px);
