@@ -51,7 +51,7 @@ border-radius:10px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-margin-top:0.3%;
+margin-top:0.4%;
 }
 
 .logo button:hover{
@@ -298,7 +298,7 @@ li {font-size: clamp(12px, 1vw, 16px);}
     width: 95%;
   }
   
-  .logo{width:90%;}
+  .logo{width:95%;}
   .selettore input{padding-top:3%;
 	padding-bottom:3%;
   .logo img{width:50%;}
