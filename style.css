@@ -193,7 +193,7 @@ display:flex;
 color:white;
 height:82%;
 
-  font-size: clamp(18px, 2vw, 30px);
+  font-size: clamp(20px, 2vw, 30px);
 padding:0 10px 0 10px;
   align-items: center;
   justify-content: center;
