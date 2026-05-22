@@ -51,7 +51,7 @@ border-radius:10px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-margin-top:0.5%;
+margin-top:0.3%;
 }
 
 .logo button:hover{
@@ -169,7 +169,7 @@ display:flex;
   outline: none;
 
   font-family: Montserrat;
-  font-size: clamp(14px, 1vw, 16px);
+  font-size: clamp(15px, 1vw, 16px);
 
   color: white;
   background-color: #8faac8;
@@ -295,11 +295,12 @@ li {font-size: clamp(12px, 1vw, 16px);}
   .cards {
     display:flex;
     flex-direction: column;
-    width: 90%;
+    width: 95%;
   }
   
   .logo{width:90%;}
-  
+  .selettore input{padding-top:3%;
+	padding-bottom:3%;
   .logo img{width:50%;}
   
 
