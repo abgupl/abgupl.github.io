@@ -79,12 +79,44 @@
 
 
   <div class="img-box">
+
+
+
+
+
+
+
+
+
   <img id="logo2" src="foto auto/logo.jpg">
   <img id="img2" style="display:none;">
+
+
+
+
 </div>
 
 
     <h2 id="nome2">Seleziona Auto</h2>
+
+
+<div>
+  <div id="listino-box" style="display:none;">
+    <span class="diagonal-strike">€ <span id="listino"></span></span>
+  </div>
+
+  <div id="prezzo-box" style="display:none; color:green; font-size:18px;">
+    € <span id="prezzo-upgrade"></span> / day + tax
+  </div>
+</div>
+
+<!-- pannello admin -->
+<div id="admin-panel" style="display:none;">
+  <input id="input-listino" placeholder="Prezzo listino">
+  <input id="input-upgrade" placeholder="Prezzo upgrade">
+  <button onclick="aggiornaPrezzi()">OK</button>
+</div>
+
 
 
     <h3 data-translate>Caratteristiche</h3>
@@ -106,6 +138,38 @@
 </div>
 
 <script>
+
+
+
+
+
+function aggiornaPrezzi() {
+  const listino = document.getElementById("input-listino").value;
+  const upgrade = document.getElementById("input-upgrade").value;
+
+  const listinoBox = document.getElementById("listino-box");
+  const prezzoBox = document.getElementById("prezzo-box");
+
+  if (!listino || !upgrade) {
+    listinoBox.style.display = "none";
+    prezzoBox.style.display = "none";
+    return;
+  }
+
+  document.getElementById("listino").innerText = listino;
+  document.getElementById("prezzo-upgrade").innerText = upgrade;
+
+  // grassetto
+  document.getElementById("listino").style.fontWeight = "bold";
+  document.getElementById("prezzo-upgrade").style.fontWeight = "bold";
+
+  listinoBox.style.display = "block";
+  prezzoBox.style.display = "block";
+
+  // 👉 NASCONDE IL PANNELLO INPUT DOPO OK
+  document.getElementById("admin-panel").style.display = "none";
+}
+
 
 let lingua = "it";
 
@@ -224,7 +288,7 @@ const auto = {
   img: "foto auto/audi q3.jpg",
 
   it:{
-    c1:"Bagagliaio da circa 530 litri",
+    c1:"Bagagliaio da circa 530 litri (ibrida)",
     c2:"SUV spazioso e molto confortevole",
     c3:"Guida stabile e sicura",
     c4:"Tecnologia ibrida moderna",
@@ -235,7 +299,7 @@ const auto = {
   },
 
   en:{
-    c1:"530-liter trunk",
+    c1:"530-liter trunk (hybrid version)",
     c2:"Spacious and very comfortable SUV",
     c3:"Stable and safe driving",
     c4:"Modern hybrid technology",
@@ -246,7 +310,7 @@ const auto = {
   },
 
   fr:{
-    c1:"Coffre d’environ 530 litres ",
+    c1:"Coffre d’environ 530 litres (hybride)",
     c2:"SUV spacieux et très confortable",
     c3:"Conduite stable et sûre",
     c4:"Technologie hybride moderne",
@@ -257,7 +321,7 @@ const auto = {
   },
 
   es:{
-    c1:"Maletero de unos 530 litros ",
+    c1:"Maletero de unos 530 litros (híbrido)",
     c2:"SUV espacioso y muy cómodo",
     c3:"Conducción estable y segura",
     c4:"Tecnología híbrida moderna",
@@ -2843,7 +2907,6 @@ const auto = {
   }
 }};
 
-
 // Popola menu
 const s1 = document.getElementById("auto1");
 const s2 = document.getElementById("auto2");
@@ -2936,28 +2999,27 @@ function toggleLista(id){
 
 function aggiorna() {
 
-  const a = auto[s1.value] || auto["Seleziona Auto"];
-  const b = auto[s2.value] || auto["Seleziona Auto"];
+  const a = auto[s1.value] || auto[""];
+  const b = auto[s2.value] || auto[""];
 
-const datiA = a[lingua] || a;
-const datiB = b[lingua] || b;
-
+  const datiA = a[lingua] || a;
+  const datiB = b[lingua] || b;
 
   // =====================
   // CARD 1
   // =====================
   document.getElementById("nome1").innerText =
-    s1.value || "Seleziona Auto";
+    s1.value && s1.value !== "Seleziona Auto" ? s1.value : "Seleziona Auto";
 
-document.getElementById("c1a").innerText = datiA.c1;
-document.getElementById("c2a").innerText = datiA.c2;
-document.getElementById("c3a").innerText = datiA.c3;
-document.getElementById("c4a").innerText = datiA.c4;
+  document.getElementById("c1a").innerText = datiA.c1;
+  document.getElementById("c2a").innerText = datiA.c2;
+  document.getElementById("c3a").innerText = datiA.c3;
+  document.getElementById("c4a").innerText = datiA.c4;
 
-document.getElementById("v1a").innerText = datiA.v1;
-document.getElementById("v2a").innerText = datiA.v2;
-document.getElementById("v3a").innerText = datiA.v3;
-document.getElementById("v4a").innerText = datiA.v4;
+  document.getElementById("v1a").innerText = datiA.v1;
+  document.getElementById("v2a").innerText = datiA.v2;
+  document.getElementById("v3a").innerText = datiA.v3;
+  document.getElementById("v4a").innerText = datiA.v4;
 
   const logo1 = document.getElementById("logo1");
   const img1 = document.getElementById("img1");
@@ -2975,17 +3037,17 @@ document.getElementById("v4a").innerText = datiA.v4;
   // CARD 2
   // =====================
   document.getElementById("nome2").innerText =
-    s2.value || "Seleziona Auto";
+    s2.value && s2.value !== "Seleziona Auto" ? s2.value : "Seleziona Auto";
 
   document.getElementById("c1b").innerText = datiB.c1;
-document.getElementById("c2b").innerText = datiB.c2;
-document.getElementById("c3b").innerText = datiB.c3;
-document.getElementById("c4b").innerText = datiB.c4;
+  document.getElementById("c2b").innerText = datiB.c2;
+  document.getElementById("c3b").innerText = datiB.c3;
+  document.getElementById("c4b").innerText = datiB.c4;
 
-document.getElementById("v1b").innerText = datiB.v1;
-document.getElementById("v2b").innerText = datiB.v2;
-document.getElementById("v3b").innerText = datiB.v3;
-document.getElementById("v4b").innerText = datiB.v4;
+  document.getElementById("v1b").innerText = datiB.v1;
+  document.getElementById("v2b").innerText = datiB.v2;
+  document.getElementById("v3b").innerText = datiB.v3;
+  document.getElementById("v4b").innerText = datiB.v4;
 
   const logo2 = document.getElementById("logo2");
   const img2 = document.getElementById("img2");
@@ -2998,9 +3060,36 @@ document.getElementById("v4b").innerText = datiB.v4;
     img2.src = b.img;
     img2.style.display = "block";
   }
+
+  // =====================
+  // PREZZI
+  // =====================
+  const listinoBox = document.getElementById("listino-box");
+  const prezzoBox = document.getElementById("prezzo-box");
+
+  if (s2.value && s2.value !== "Seleziona Auto" && auto[s2.value]) {
+    // NON forziamo qui i prezzi, li gestisce solo aggiornaPrezzi()
+    // ma mostriamo i contenitori se già valorizzati
+  } else {
+    listinoBox.style.display = "none";
+    prezzoBox.style.display = "none";
+  }
+
+  // =====================
+  // ADMIN PANEL
+  // =====================
+  const adminPanel = document.getElementById("admin-panel");
+
+  if (s2.value && s2.value !== "Seleziona Auto" && auto[s2.value]) {
+    adminPanel.style.display = "block";
+  } else {
+    adminPanel.style.display = "none";
+
+    // reset anche prezzi quando cambi auto
+    listinoBox.style.display = "none";
+    prezzoBox.style.display = "none";
+  }
 }
-
-
 
 
 function cambiaLingua(lang){
