@@ -140,10 +140,12 @@
 <script>
 
 
-
+let prezziConfermati = false;
+let ultimaAuto2 = "";
 
 
 function aggiornaPrezzi() {
+
   const listino = document.getElementById("input-listino").value;
   const upgrade = document.getElementById("input-upgrade").value;
 
@@ -159,16 +161,17 @@ function aggiornaPrezzi() {
   document.getElementById("listino").innerText = listino;
   document.getElementById("prezzo-upgrade").innerText = upgrade;
 
-  // grassetto
   document.getElementById("listino").style.fontWeight = "bold";
   document.getElementById("prezzo-upgrade").style.fontWeight = "bold";
 
   listinoBox.style.display = "block";
   prezzoBox.style.display = "block";
 
-  // 👉 NASCONDE IL PANNELLO INPUT DOPO OK
+  prezziConfermati = true;
+
   document.getElementById("admin-panel").style.display = "none";
 }
+
 
 
 let lingua = "it";
@@ -2996,7 +2999,6 @@ function toggleLista(id){
 
 
 
-
 function aggiorna() {
 
   const a = auto[s1.value] || auto[""];
@@ -3062,34 +3064,39 @@ function aggiorna() {
   }
 
   // =====================
-  // PREZZI
+  // PREZZI + ADMIN PANEL (FIX DEFINITIVO)
   // =====================
+
+  const adminPanel = document.getElementById("admin-panel");
   const listinoBox = document.getElementById("listino-box");
   const prezzoBox = document.getElementById("prezzo-box");
 
-  if (s2.value && s2.value !== "Seleziona Auto" && auto[s2.value]) {
-    // NON forziamo qui i prezzi, li gestisce solo aggiornaPrezzi()
-    // ma mostriamo i contenitori se già valorizzati
-  } else {
-    listinoBox.style.display = "none";
-    prezzoBox.style.display = "none";
+  // se cambio auto 2 → reset input e mostra pannello
+  if (s2.value !== ultimaAuto2) {
+
+    if (s2.value && s2.value !== "Seleziona Auto" && auto[s2.value]) {
+      adminPanel.style.display = "block";
+    } else {
+      adminPanel.style.display = "none";
+    }
+
+    ultimaAuto2 = s2.value;
   }
 
-  // =====================
-  // ADMIN PANEL
-  // =====================
-  const adminPanel = document.getElementById("admin-panel");
-
-  if (s2.value && s2.value !== "Seleziona Auto" && auto[s2.value]) {
-    adminPanel.style.display = "block";
-  } else {
+  // se non c'è auto 2 valida → nascondi tutto
+  if (!s2.value || s2.value === "Seleziona Auto" || !auto[s2.value]) {
     adminPanel.style.display = "none";
-
-    // reset anche prezzi quando cambi auto
     listinoBox.style.display = "none";
     prezzoBox.style.display = "none";
   }
 }
+
+
+
+
+
+
+
 
 
 function cambiaLingua(lang){
