@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Confronto Coperture</title>
+<style>
+
+body{
+    margin:0;
+    background:#f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+    width:1100px;
+    margin:40px auto;
+    background:#fff;
+    box-shadow:0 0 25px rgba(0,0,0,0.08);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+}
+
+/* HEADER */
+th{
+    color:#fff;
+    padding:28px;
+    font-size:22px;
+    text-transform:uppercase;
+}
+
+.broker-head{
+    background:#d91f2d;
+}
+
+.rent-head{
+    background:#113b5c;
+}
+
+/* SUBTITLE */
+.subtitle{
+    background:#e6e6e6;
+    text-align:center;
+    font-weight:bold;
+    padding:12px;
+    text-transform:uppercase;
+    font-size:14px;
+}
+
+/* CELLS */
+td{
+    padding:26px 30px;
+    font-size:16px;
+    line-height:1.4;
+    vertical-align:middle;
+    border-bottom:6px solid #fff;
+}
+
+.orange{
+    background:#e9a87d;
+}
+
+.blue{
+    background:#7d8eab;
+    color:#fff;
+}
+
+.grey{
+    background:#cfcfcf;
+    font-weight:bold;
+}
+
+/* PAGAMENTO */
+.payment{
+    background:#e9a87d;
+    font-weight:bold;
+    text-transform:uppercase;
+    font-size:18px;
+}
+
+.payment svg{
+    width:45px;
+    vertical-align:middle;
+    margin-right:15px;
+}
+
+/* TEMPO E PRATICHE */
+.refund{
+    background:#113b5c;
+    color:#fff;
+    font-size:18px;
+    text-transform:uppercase;
+}
+
+.refund svg{
+    width:40px;
+    vertical-align:middle;
+    margin-right:10px;
+    fill:#fff;
+}
+
+/* FOOTER */
+.bottom{
+    background:#e9a87d;
+    text-align:center;
+    font-weight:bold;
+    padding:22px;
+    font-size:18px;
+    text-transform:uppercase;
+}
+
+.check{
+    text-align:right;
+    padding:15px 30px;
+}
+
+.check svg{
+    width:40px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+<table>
+
+    <tr>
+        <th class="broker-head">Con copertura Broker</th>
+        <th class="rent-head">Con copertura Autonoleggio</th>
+    </tr>
+
+    <tr>
+        <td colspan="2" class="subtitle">
+            In caso di danno / furto
+        </td>
+    </tr>
+
+    <tr>
+        <td class="orange">Paghi subito, poi chiedi il rimborso</td>
+        <td class="orange">Non paghi nulla</td>
+    </tr>
+
+    <tr>
+        <td class="orange">Ti fai carico delle responsabilità economiche accettandole sul contratto</td>
+        <td class="orange">Firmi un contratto con zero responsabilità e nessun rischio</td>
+    </tr>
+
+    <tr>
+        <td class="blue">Attendi la verifica delle condizioni del veicolo al rientro</td>
+        <td class="orange">Controllo più veloce al rientro risparmiando tempo</td>
+    </tr>
+
+    <tr>
+        <td class="blue">Produzione di modulistica e tempi di attesa per rimborso</td>
+        <td class="orange">Ricevuta finale immediata e nessuna sorpresa</td>
+    </tr>
+
+    <tr>
+        <td class="blue">Protezione a rimborso</td>
+        <td class="grey">COPERTURA TOTALE IMMEDIATA</td>
+    </tr>
+
+    <tr>
+        <td colspan="2" class="payment">
+            <!-- Icona Euro -->
+            <svg viewBox="0 0 24 24" fill="#c0392b">
+                <path d="M15 18.5A6.5 6.5 0 1 1 15 5.5M3 10h10M3 14h10" 
+                      stroke="#c0392b" stroke-width="2" fill="none"/>
+            </svg>
+            Pagamento immediato per responsabilità
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" class="refund">
+            <!-- Clessidra -->
+            <svg viewBox="0 0 24 24">
+                <path d="M6 2h12v2c0 3-4 4-4 6s4 3 4 6v2H6v-2c0-3 4-4 4-6S6 7 6 4V2z"/>
+            </svg>
+
+            <!-- Documento -->
+            <svg viewBox="0 0 24 24">
+                <path d="M6 2h9l5 5v15H6z"/>
+            </svg>
+
+            Tempo e pratiche per rimborso
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" class="bottom">
+            Con la nostra copertura zero spese anticipate né tempo perso in pratiche
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" class="check">
+            <svg viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5" stroke="#e67e22" stroke-width="3" fill="none"/>
+            </svg>
+        </td>
+    </tr>
+
+</table>
+
+</div>
+
+</body>
+</html>
