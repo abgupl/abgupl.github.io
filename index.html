@@ -63,6 +63,10 @@
       <li id="v3a"></li>
       <li id="v4a"></li>
     </ul>
+
+
+
+
   </div>
 
 
@@ -97,7 +101,12 @@
 </div>
 
 
-    <h2 id="nome2">Seleziona Auto</h2>
+
+
+  <h2 id="nome2">Seleziona Auto   </h2>
+
+
+
 
 
 <div>
@@ -115,6 +124,7 @@
   <input id="input-listino" placeholder="Prezzo listino">
   <input id="input-upgrade" placeholder="Prezzo upgrade">
   <button onclick="aggiornaPrezzi()">OK</button>
+  <button id="btn-pulisci" class="btn-pulisci" onclick="nascondiExtra()">Pulisci</button>
 </div>
 
 
@@ -134,7 +144,10 @@
       <li data-translate id="v3b"></li>
       <li data-translate id="v4b"></li>
     </ul>
+
+
   </div>
+
 </div>
 
 <script>
@@ -525,6 +538,56 @@ const auto = {
     v4:"Perfecto para uso moderno"
   }
 },
+
+"BYD Seal 6 SW": {
+  img: "foto auto/seal6wag.jpg",
+
+  it:{
+    c1:"Bagagliaio da circa 500 litri versatile",
+    c2:"Station wagon ibrida spaziosa e tecnologica",
+    c3:"Ampio spazio per passeggeri e bagagli",
+    c4:"Motorizzazione ibrida plug-in efficiente",
+    v1:"Grande capacità di carico",
+    v2:"Tecnologia avanzata",
+    v3:"Comfort premium",
+    v4:"Perfetta per viaggi e famiglie"
+  },
+
+  en:{
+    c1:"Approximately 500-liter versatile trunk",
+    c2:"Spacious and technological plug-in hybrid wagon",
+    c3:"Large passenger and luggage space",
+    c4:"Efficient plug-in hybrid powertrain",
+    v1:"Large cargo capacity",
+    v2:"Advanced technology",
+    v3:"Premium comfort",
+    v4:"Perfect for trips and families"
+  },
+
+  fr:{
+    c1:"Coffre d’environ 500 litres polyvalent",
+    c2:"Break hybride rechargeable spacieux et technologique",
+    c3:"Grand espace pour passagers et bagages",
+    c4:"Motorisation hybride rechargeable efficace",
+    v1:"Grande capacité de chargement",
+    v2:"Technologie avancée",
+    v3:"Confort premium",
+    v4:"Parfaite pour les voyages et les familles"
+  },
+
+  es:{
+    c1:"Maletero de aproximadamente 500 litros versátil",
+    c2:"Familiar híbrido enchufable espacioso y tecnológico",
+    c3:"Gran espacio para pasajeros y equipaje",
+    c4:"Motorización híbrida enchufable eficiente",
+    v1:"Gran capacidad de carga",
+    v2:"Tecnología avanzada",
+    v3:"Confort premium",
+    v4:"Perfecto para viajes y familias"
+  }
+},
+
+
 
 "BYD Seal U": {
   img: "foto auto/byd seal u.jpg",
@@ -1748,6 +1811,56 @@ const auto = {
   }
 },
 
+
+"Mercedes Classe E SW": {
+  img: "foto auto/classee.jpg",
+
+  it:{
+    c1:"Bagagliaio da circa 615 litri elegante e spazioso",
+    c2:"Station wagon premium di lusso",
+    c3:"Tecnologia avanzata e comfort superiore",
+    c4:"Motorizzazioni efficienti e potenti",
+    v1:"Grande capacità di carico",
+    v2:"Eleganza premium",
+    v3:"Comfort ai massimi livelli",
+    v4:"Perfetta per viaggi e business"
+  },
+
+  en:{
+    c1:"Approximately 615-liter elegant and spacious trunk",
+    c2:"Luxury premium station wagon",
+    c3:"Advanced technology and superior comfort",
+    c4:"Efficient and powerful engines",
+    v1:"Large cargo capacity",
+    v2:"Premium elegance",
+    v3:"Maximum comfort",
+    v4:"Perfect for travel and business"
+  },
+
+  fr:{
+    c1:"Coffre d’environ 615 litres élégant et spacieux",
+    c2:"Break premium de luxe",
+    c3:"Technologie avancée et confort supérieur",
+    c4:"Motorisations efficaces et puissantes",
+    v1:"Grande capacité de chargement",
+    v2:"Élégance premium",
+    v3:"Confort exceptionnel",
+    v4:"Parfaite pour les voyages et le business"
+  },
+
+  es:{
+    c1:"Maletero de aproximadamente 615 litros elegante y espacioso",
+    c2:"Familiar premium de lujo",
+    c3:"Tecnología avanzada y confort superior",
+    c4:"Motores eficientes y potentes",
+    v1:"Gran capacidad de carga",
+    v2:"Elegancia premium",
+    v3:"Máximo confort",
+    v4:"Perfecto para viajes y negocios"
+  }
+},
+
+
 "Mercedes GLA": {
   img: "foto auto/gla.jpg",
 
@@ -2234,6 +2347,55 @@ const auto = {
     v4: "Ideal para confort y versatilidad diaria"
   }
 },
+
+"Omoda 5": {
+  img: "foto auto/omoda5.jpg",
+
+  it:{
+    c1:"Bagagliaio da circa 380 litri pratico",
+    c2:"SUV compatto dal design moderno",
+    c3:"Interni tecnologici e confortevoli",
+    c4:"Motore efficiente e brillante",
+    v1:"Design distintivo",
+    v2:"Tecnologia completa",
+    v3:"Comfort elevato",
+    v4:"Ideale per uso quotidiano"
+  },
+
+  en:{
+    c1:"Approximately 380-liter practical trunk",
+    c2:"Compact SUV with modern design",
+    c3:"Technological and comfortable interior",
+    c4:"Efficient and responsive engine",
+    v1:"Distinctive design",
+    v2:"Complete technology",
+    v3:"High comfort",
+    v4:"Ideal for everyday use"
+  },
+
+  fr:{
+    c1:"Coffre d’environ 380 litres pratique",
+    c2:"SUV compact au design moderne",
+    c3:"Habitacle technologique et confortable",
+    c4:"Moteur efficace et dynamique",
+    v1:"Design distinctif",
+    v2:"Technologie complète",
+    v3:"Confort élevé",
+    v4:"Idéal pour un usage quotidien"
+  },
+
+  es:{
+    c1:"Maletero de aproximadamente 380 litros práctico",
+    c2:"SUV compacto con diseño moderno",
+    c3:"Interior tecnológico y confortable",
+    c4:"Motor eficiente y dinámico",
+    v1:"Diseño distintivo",
+    v2:"Tecnología completa",
+    v3:"Alto confort",
+    v4:"Ideal para uso diario"
+  }
+},
+
 
 "Peugeot 2008": {
   img: "foto auto/2008.jpg",
@@ -2969,8 +3131,8 @@ for (let nome in auto) {
 }
 
 // Valori iniziali
-s1.value = "Seleziona Auto";
-s2.value = "Seleziona Auto";
+s1.value = sessionStorage.getItem("auto1") || "Seleziona Auto";
+s2.value = sessionStorage.getItem("auto2") || "Seleziona Auto";
 
 
 
@@ -2987,19 +3149,29 @@ function pulisciSeVuoto(el){
 
 
 function renderLista(id){
+
   const box = document.getElementById(id);
   box.innerHTML = "";
 
   for (let nome in auto){
+
     let div = document.createElement("div");
     div.innerText = nome;
 
     div.onclick = function(){
+
       if(id === "list1"){
+
         document.getElementById("auto1").value = nome;
+        sessionStorage.setItem("auto1", nome);
+
       } else {
+
         document.getElementById("auto2").value = nome;
+        sessionStorage.setItem("auto2", nome);
+
       }
+
       box.style.display = "none";
       aggiorna();
     };
@@ -3007,6 +3179,7 @@ function renderLista(id){
     box.appendChild(div);
   }
 }
+
 
 function filtra(inputId, listId){
   const valore = document.getElementById(inputId).value.toLowerCase();
@@ -3118,24 +3291,29 @@ function aggiorna() {
   const listinoBox = document.getElementById("listino-box");
   const prezzoBox = document.getElementById("prezzo-box");
 
-  // se cambio auto 2 → reset input e mostra pannello
-  if (s2.value !== ultimaAuto2) {
+// se cambio auto 2 → reset prezzi e mostra pannello
+if (s2.value !== ultimaAuto2) {
+
+    // cancella prezzi precedenti
+    document.getElementById("input-listino").value = "";
+    document.getElementById("input-upgrade").value = "";
+
+    document.getElementById("listino").innerText = "";
+    document.getElementById("prezzo-upgrade").innerText = "";
+
+    listinoBox.style.display = "none";
+    prezzoBox.style.display = "none";
+
+    prezziConfermati = false;
 
     if (s2.value && s2.value !== "Seleziona Auto" && auto[s2.value]) {
-      adminPanel.style.display = "block";
+        adminPanel.style.display = "block";
     } else {
-      adminPanel.style.display = "none";
+        adminPanel.style.display = "none";
     }
 
     ultimaAuto2 = s2.value;
-  }
-
-  // se non c'è auto 2 valida → nascondi tutto
-  if (!s2.value || s2.value === "Seleziona Auto" || !auto[s2.value]) {
-    adminPanel.style.display = "none";
-    listinoBox.style.display = "none";
-    prezzoBox.style.display = "none";
-  }
+}
 }
 
 
@@ -3143,6 +3321,20 @@ function aggiorna() {
 
 
 
+function nascondiExtra(){
+
+  const listinoBox = document.getElementById("listino-box");
+  const prezzoBox = document.getElementById("prezzo-box");
+  const adminPanel = document.getElementById("admin-panel");
+
+  // nasconde prezzi visualizzati
+  listinoBox.style.display = "none";
+  prezzoBox.style.display = "none";
+
+  // nasconde modulo inserimento + tasti OK e Pulisci
+  adminPanel.style.display = "none";
+
+}
 
 
 
@@ -3169,3 +3361,4 @@ function cambiaLingua(lang){
 
 </body>
 </html>
+
