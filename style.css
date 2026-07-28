@@ -72,7 +72,7 @@ font-size:18px;			border-bottom:1px solid lightcoral; /* modello macchina */
 }
 
 
-#prezzo-upgrade {
+#prezzo-box {
   font-weight: bold;
   display: inline-block;
   animation: pulse 1.5s infinite;
