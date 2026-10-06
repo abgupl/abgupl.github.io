@@ -28,43 +28,60 @@
    
 
 
-  <div class="cards"> 
-  <div class="card"> 
-	  	 <div class="selettore">
+ <div class="cards">
 
-<input type="text" id="auto1" placeholder="Cerca auto..." onfocus="pulisciSeVuoto(this)" oninput="filtra('auto1','list1')" autocomplete="off">
+  <div class="card">
+    <div class="selettore">
 
- <button type="button" class="lens" onclick="toggleLista('list1')" event.preventDefault()">⌕</button>
+      <input
+        type="text"
+        id="auto1"
+        placeholder="Cerca auto..."
+        onfocus="pulisciSeVuoto(this)"
+        oninput="filtra('auto1','list1')"
+        autocomplete="off"
+      >
 
+      <button
+        type="button"
+        id="btn-auto1"
+        class="lens"
+        onclick="azioneSelettore(1)"
+      >⌕</button>
 
-  <div class="dropdown" id="list1"></div>
-</div>
+      <div class="dropdown" id="list1"></div>
+    </div>
 
-<div class="img-box">
-  <img id="logo1" src="foto auto/logo.jpg">
-  <img id="img1" style="display:none;">
-</div>
-    <h2 id="nome1" onclick="apriModuliVuoti(1)" title="Clicca per inserire i prezzi" style="cursor:pointer;">Seleziona Auto</h2>
+    <div class="img-box">
+      <img id="logo1" src="foto auto/logo.jpg">
+      <img id="img1" style="display:none;">
+    </div>
 
-<div>
-  <div id="listino-box1" style="display:none;">
-    <span class="diagonal-strike">€ <span id="listino1"></span></span>
-  </div>
+    <h2
+      id="nome1"
+      onclick="apriModuliVuoti(1)"
+      title="Clicca per inserire i prezzi"
+      style="cursor:pointer;"
+    >Seleziona Auto</h2>
 
-  <div id="prezzo-box1" style="display:none; color:green; font-size:18px;">
-    € <span id="prezzo-upgrade1"></span> / day + tax
-  </div>
-</div>
+    <div>
+      <div id="listino-box1" style="display:none;">
+        <span class="diagonal-strike">
+          € <span id="listino1"></span>
+        </span>
+      </div>
 
-<!-- pannello prezzi colonna sinistra -->
-<div id="admin-panel1" style="display:none;">
-  <input id="input-listino1" placeholder="Prezzo listino">
-  <input id="input-upgrade1" placeholder="Prezzo scontato">
-  <button onclick="aggiornaPrezzi(1)">OK</button>
-  <button class="btn-pulisci" onclick="nascondiExtra(1)">Pulisci</button>
-</div>
+      <div id="prezzo-box1" style="display:none; color:green; font-size:18px;">
+        € <span id="prezzo-upgrade1"></span> / day + tax
+      </div>
+    </div>
 
-
+    <div id="admin-panel1" style="display:none;">
+      <input id="input-listino1" placeholder="Prezzo listino">
+      <input id="input-upgrade1" placeholder="Prezzo scontato">
+      <button onclick="aggiornaPrezzi(1)">OK</button>
+      <button class="btn-pulisci" onclick="nascondiExtra(1)">Pulisci</button>
+    </div>
 
     <h3>Caratteristiche</h3>
     <ul>
@@ -82,70 +99,61 @@
       <li id="v4a"></li>
     </ul>
 
-
-
-
   </div>
-
 
 
   <div class="card">
-		 <div class="selettore">
-<input type="text" id="auto2" placeholder="Cerca auto..." onfocus="pulisciSeVuoto(this)" oninput="filtra('auto2','list2')" autocomplete="off">
+    <div class="selettore">
 
- <button type="button" class="lens" onclick="toggleLista('list2')" event.preventDefault()">⌕</button>
+      <input
+        type="text"
+        id="auto2"
+        placeholder="Cerca auto..."
+        onfocus="pulisciSeVuoto(this)"
+        oninput="filtra('auto2','list2')"
+        autocomplete="off"
+      >
 
+      <button
+        type="button"
+        id="btn-auto2"
+        class="lens"
+        onclick="azioneSelettore(2)"
+      >⌕</button>
 
-  <div class="dropdown" id="list2"></div>
-</div>
+      <div class="dropdown" id="list2"></div>
+    </div>
 
+    <div class="img-box">
+      <img id="logo2" src="foto auto/logo.jpg">
+      <img id="img2" style="display:none;">
+    </div>
 
-  <div class="img-box">
+    <h2
+      id="nome2"
+      onclick="apriModuliVuoti(2)"
+      title="Clicca per inserire i prezzi"
+      style="cursor:pointer;"
+    >Seleziona Auto</h2>
 
+    <div>
+      <div id="listino-box2" style="display:none;">
+        <span class="diagonal-strike">
+          € <span id="listino2"></span>
+        </span>
+      </div>
 
+      <div id="prezzo-box2" style="display:none; color:green; font-size:18px;">
+        € <span id="prezzo-upgrade2"></span> / day + tax
+      </div>
+    </div>
 
-
-
-
-
-
-
-  <img id="logo2" src="foto auto/logo.jpg">
-  <img id="img2" style="display:none;">
-
-
-
-
-</div>
-
-
-
-
-  <h2 id="nome2" onclick="apriModuliVuoti(2)" title="Clicca per inserire i prezzi" style="cursor:pointer;">Seleziona Auto</h2>
-
-
-
-
-
-<div>
-  <div id="listino-box2" style="display:none;">
-    <span class="diagonal-strike">€ <span id="listino2"></span></span>
-  </div>
-
-  <div id="prezzo-box2" style="display:none; color:green; font-size:18px;">
-    € <span id="prezzo-upgrade2"></span> / day + tax
-  </div>
-</div>
-
-<!-- pannello prezzi colonna destra -->
-<div id="admin-panel2" style="display:none;">
-  <input id="input-listino2" placeholder="Prezzo listino">
-  <input id="input-upgrade2" placeholder="Prezzo scontato">
-  <button onclick="aggiornaPrezzi(2)">OK</button>
-  <button class="btn-pulisci" onclick="nascondiExtra(2)">Pulisci</button>
-</div>
-
-
+    <div id="admin-panel2" style="display:none;">
+      <input id="input-listino2" placeholder="Prezzo listino">
+      <input id="input-upgrade2" placeholder="Prezzo scontato">
+      <button onclick="aggiornaPrezzi(2)">OK</button>
+      <button class="btn-pulisci" onclick="nascondiExtra(2)">Pulisci</button>
+    </div>
 
     <h3 data-translate>Caratteristiche</h3>
     <ul>
@@ -162,7 +170,6 @@
       <li data-translate id="v3b"></li>
       <li data-translate id="v4b"></li>
     </ul>
-
 
   </div>
 
@@ -3520,23 +3527,22 @@ function pulisciSeVuoto(el){
 
 
 
-
-
-
-
-function renderLista(id){
+function renderLista(id) {
 
   const box = document.getElementById(id);
   box.innerHTML = "";
 
-  for (let nome in auto){
+  for (let nome in auto) {
+
+    // Non mostra la voce vuota
+    if (!nome) continue;
 
     let div = document.createElement("div");
     div.innerText = nome;
 
-    div.onclick = function(){
+    div.onclick = function() {
 
-      if(id === "list1"){
+      if (id === "list1") {
 
         document.getElementById("auto1").value = nome;
         sessionStorage.setItem("auto1", nome);
@@ -3549,7 +3555,11 @@ function renderLista(id){
       }
 
       box.style.display = "none";
+
       aggiorna();
+
+      // Dopo la selezione trasforma la lente in X
+      aggiornaPulsantiSelettore();
     };
 
     box.appendChild(div);
@@ -3557,25 +3567,35 @@ function renderLista(id){
 }
 
 
-function filtra(inputId, listId){
+function filtra(inputId, listId) {
+
   const valore = document.getElementById(inputId).value.toLowerCase();
   const box = document.getElementById(listId);
 
   box.innerHTML = "";
 
-  for (let nome in auto){
-    if(nome.toLowerCase().includes(valore)){
+  for (let nome in auto) {
+
+    if (!nome) continue;
+
+    if (nome.toLowerCase().includes(valore)) {
+
       let div = document.createElement("div");
       div.innerText = nome;
 
-      div.onclick = function(){
+      div.onclick = function() {
+
         document.getElementById(inputId).value = nome;
 
-        // Mantiene sincronizzata l'auto selezionata anche quando
-        // la scelta avviene dai risultati filtrati della ricerca.
+        // Mantiene sincronizzata l'auto selezionata
         sessionStorage.setItem(inputId, nome);
+
         box.style.display = "none";
+
         aggiorna();
+
+        // Dopo la selezione trasforma la lente in X
+        aggiornaPulsantiSelettore();
       };
 
       box.appendChild(div);
@@ -3586,11 +3606,16 @@ function filtra(inputId, listId){
 }
 
 
+function toggleLista(id) {
 
-function toggleLista(id){
   const box = document.getElementById(id);
-  box.style.display = box.style.display === "block" ? "none" : "block";
-  if(box.style.display === "block") renderLista(id);
+
+  box.style.display =
+    box.style.display === "block" ? "none" : "block";
+
+  if (box.style.display === "block") {
+    renderLista(id);
+  }
 }
 
 
@@ -3697,6 +3722,96 @@ function gestisciPannelloPrezzi(colonna, autoSelezionata, ultimaAuto) {
 
 
 
+
+
+function azioneSelettore(colonna) {
+
+  const input = document.getElementById(`auto${colonna}`);
+
+  // Se esiste una vera auto selezionata,
+  // il pulsante funziona come X
+  if (input.value && auto[input.value]) {
+
+    resetAuto(colonna);
+
+  } else {
+
+    // Se non c'è un'auto selezionata,
+    // funziona normalmente come lente
+    toggleLista(`list${colonna}`);
+  }
+}
+
+
+function aggiornaPulsantiSelettore() {
+
+  aggiornaPulsanteSelettore(1);
+  aggiornaPulsanteSelettore(2);
+}
+
+
+function aggiornaPulsanteSelettore(colonna) {
+
+  const input = document.getElementById(`auto${colonna}`);
+  const btn = document.getElementById(`btn-auto${colonna}`);
+
+  if (!btn) return;
+
+  // X solo quando è stata scelta realmente
+  // un'auto presente nell'oggetto "auto"
+  if (input.value && auto[input.value]) {
+
+    btn.innerHTML = "×";
+    btn.classList.add("is-clear");
+    btn.title = "Rimuovi auto";
+
+  } else {
+
+    btn.innerHTML = "⌕";
+    btn.classList.remove("is-clear");
+    btn.title = "Cerca auto";
+  }
+}
+
+
+function resetAuto(colonna) {
+
+  const input = document.getElementById(`auto${colonna}`);
+  const dropdown = document.getElementById(`list${colonna}`);
+
+  // Chiude il menu
+  dropdown.style.display = "none";
+
+  // Cancella auto
+  input.value = "";
+
+  // Cancella memoria
+  sessionStorage.removeItem(`auto${colonna}`);
+
+  // IMPORTANTE:
+  // forza aggiorna() a riconoscere
+  // che l'auto è realmente cambiata
+  if (colonna === 1) {
+    ultimaAuto1 = "__reset__";
+  } else {
+    ultimaAuto2 = "__reset__";
+  }
+
+  // Aggiorna tutta la card:
+  // nome, immagine, caratteristiche,
+  // vantaggi e pannello prezzi
+  aggiorna();
+
+  // Ripristina lente
+  aggiornaPulsanteSelettore(colonna);
+}
+
+
+
+
+
+
+
 function nascondiExtra(colonna){
 
   const listinoBox = document.getElementById(`listino-box${colonna}`);
@@ -3756,7 +3871,8 @@ function cambiaLingua(lang){
 // Reset completo delle auto ad ogni caricamento/refresh (F5).
 // Il listener pageshow viene eseguito anche dopo l'eventuale ripristino
 // automatico dei valori dei campi da parte del browser.
-function resetAutoDopoRefresh(){
+function resetAutoDopoRefresh() {
+
   sessionStorage.removeItem("auto1");
   sessionStorage.removeItem("auto2");
 
@@ -3767,10 +3883,81 @@ function resetAutoDopoRefresh(){
   ultimaAuto2 = "";
 
   aggiorna();
+
+  // Entrambi devono partire con la lente
+  aggiornaPulsantiSelettore();
 }
 
 window.addEventListener("pageshow", resetAutoDopoRefresh);
+
+window.addEventListener("pageshow", resetAutoDopoRefresh);
       
+
+
+
+function azioneSelettore(colonna) {
+  const input = document.getElementById(`auto${colonna}`);
+
+  // Se c'è un'auto selezionata, la X cancella tutto
+  if (input.value.trim() !== "") {
+    resetAuto(colonna);
+  } else {
+    // Altrimenti funziona normalmente come lente
+    toggleLista(`list${colonna}`);
+  }
+}
+
+function mostraX(colonna) {
+  const btn = document.getElementById(`btn-auto${colonna}`);
+  btn.innerHTML = "×";
+  btn.classList.add("is-clear");
+}
+
+function mostraLente(colonna) {
+  const btn = document.getElementById(`btn-auto${colonna}`);
+  btn.innerHTML = "⌕";
+  btn.classList.remove("is-clear");
+}
+
+function resetAuto(colonna) {
+  const suffisso = colonna === 1 ? "a" : "b";
+
+  // Svuota ricerca
+  document.getElementById(`auto${colonna}`).value = "";
+
+  // Chiude dropdown
+  document.getElementById(`list${colonna}`).style.display = "none";
+
+  // Nasconde foto auto
+  document.getElementById(`img${colonna}`).style.display = "none";
+
+  // Mostra nuovamente logo
+  document.getElementById(`logo${colonna}`).style.display = "block";
+
+  // Ripristina nome
+  document.getElementById(`nome${colonna}`).innerText = "Seleziona Auto";
+
+  // Svuota caratteristiche
+  ["c1", "c2", "c3", "c4", "v1", "v2", "v3", "v4"].forEach(id => {
+    document.getElementById(`${id}${suffisso}`).innerText = "";
+  });
+
+  // Nasconde prezzi
+  document.getElementById(`listino-box${colonna}`).style.display = "none";
+  document.getElementById(`prezzo-box${colonna}`).style.display = "none";
+  document.getElementById(`admin-panel${colonna}`).style.display = "none";
+
+  // Svuota campi prezzo
+  document.getElementById(`input-listino${colonna}`).value = "";
+  document.getElementById(`input-upgrade${colonna}`).value = "";
+
+  prezziConfermati[colonna] = false;
+
+  // Ripristina la lente
+  mostraLente(colonna);
+}
+
+
 
 </script>
 
