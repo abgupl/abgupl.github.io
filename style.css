@@ -5,6 +5,25 @@ body {
   margin: 0;
 }
 
+
+
+
+/* X per cancellare l'auto selezionata */
+.lens.is-clear {
+  color: white;
+  font-size: clamp(24px, 2.2vw, 34px);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.lens.is-clear:hover {
+  background-color: lightsteelblue;
+  border-radius: 5px;
+}
+
+
+
+
 .titolo-auto {
   display: flex;
   align-items: center;
