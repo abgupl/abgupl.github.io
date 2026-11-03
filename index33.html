@@ -40,14 +40,18 @@ body .cards>.card{width:100%!important;max-width:none!important;min-width:0!impo
 @media(max-width:520px){.top-languages{gap:2px}.top-languages button{padding:4px}.top-languages img{width:21px;height:15px}.card-body{padding:12px}.card-header-label{display:none}.card .img-box{height:185px!important;min-height:185px!important;max-height:185px!important}.abg-footer img{max-width:120px}.abg-footer button{font-size:11px;padding:9px}}
 </style>
 <style>
-/* Ricerca integrata nel titolo blu: il campo non occupa spazio quando chiuso. */
-.card .selettore{display:none!important;position:absolute!important;top:54px!important;left:18px!important;right:18px!important;width:auto!important;max-width:none!important;z-index:300!important;background:white!important;padding:10px!important;border:1px solid #d7e1ee!important;border-radius:12px!important;box-shadow:0 12px 28px #102a4740!important}
-.card .selettore.ricerca-aperta{display:flex!important}
-.card{position:relative!important;overflow:visible!important}
-.card-header-name.car-select-trigger{appearance:none;background:transparent;border:0;color:white;font:inherit;font-size:16px;font-weight:800;cursor:pointer;padding:8px 14px;max-width:65%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.card-header-name.car-select-trigger:hover{text-decoration:underline;text-underline-offset:4px}
-.card .selettore .lens{right:14px!important;top:14px!important}
-.card .dropdown{top:49px!important;left:10px!important;width:calc(100% - 20px)!important}
+/* Selettore realmente incorporato nella barra blu, senza pannelli aggiuntivi. */
+.card{overflow:visible!important}
+.card-header{z-index:30!important;isolation:isolate}
+.card-header-name.car-select-trigger{display:none!important}
+.card-header .selettore{display:flex!important;position:relative!important;top:auto!important;left:auto!important;right:auto!important;width:min(65%,420px)!important;max-width:65%!important;margin:0!important;padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;z-index:35!important}
+.card-header .selettore input{display:block!important;width:100%!important;height:40px!important;padding:0 10px!important;background:transparent!important;border:1px solid transparent!important;border-radius:7px!important;color:#fff!important;text-align:center!important;font-weight:800!important;font-size:16px!important;box-shadow:none!important;outline:none!important;cursor:pointer!important;text-overflow:ellipsis!important}
+.card-header .selettore input::placeholder{color:#fff!important;opacity:1!important}
+.card-header .selettore input:focus{background:#ffffff16!important;border-color:#ffffff75!important;cursor:text!important}
+.card-header .selettore .lens{display:none!important}
+.card-header .dropdown{display:none;position:absolute!important;top:44px!important;left:0!important;width:100%!important;max-height:320px!important;overflow:auto!important;z-index:1000!important;background:white!important;border:1px solid #d7e1ee!important;border-radius:10px!important;box-shadow:0 12px 28px #102a4740!important;text-align:left!important;color:#193c60!important}
+.card-header .dropdown>div{padding:11px 13px!important;cursor:pointer!important}
+.card-header .dropdown>div:hover{background:#edf3fa!important}
 </style>
 </head>
 
@@ -4089,25 +4093,26 @@ for (const i of [1,2]) {
 updateHeaderNames();
 </script>
 <script>
-function apriRicercaHeader(colonna){
-  const selector=document.getElementById('auto'+colonna)?.closest('.selettore');
-  if(!selector)return;
-  document.querySelectorAll('.selettore.ricerca-aperta').forEach(el=>{if(el!==selector)el.classList.remove('ricerca-aperta')});
-  selector.classList.toggle('ricerca-aperta');
-  if(selector.classList.contains('ricerca-aperta')){
-    const input=document.getElementById('auto'+colonna);
-    input.focus();
-    if(typeof apriListaDaCampo==='function')apriListaDaCampo(input);
-  }
+// Sposta i campi di ricerca ORIGINALI dentro le rispettive intestazioni blu.
+// Mantiene intatti gli ID e le funzioni del vecchio sito (filtra, renderLista, aggiorna).
+for(const n of [1,2]){
+  const card=document.getElementById('auto'+n)?.closest('.card');
+  const header=card?.querySelector('.card-header');
+  const selector=card?.querySelector('.selettore');
+  const input=document.getElementById('auto'+n);
+  if(!header||!selector||!input)continue;
+  header.insertBefore(selector,header.querySelector('.card-header-close'));
+  input.setAttribute('aria-label','Cerca o seleziona vettura '+n);
+  input.placeholder='Seleziona auto';
+  // Selezionata un'auto, il nome compare direttamente nel campo blu.
+  input.addEventListener('blur',()=>{
+    if(!input.value && window['ultimaAuto'+n] && window['ultimaAuto'+n]!=='__reset__'){
+      // Non ripristinare valori durante il reset: aggiorna() resta la fonte dei dati.
+    }
+  });
 }
-document.addEventListener('click',function(e){
-  for(const n of [1,2]){
-    const sel=document.getElementById('auto'+n)?.closest('.selettore');
-    const trigger=document.getElementById('header-name'+n);
-    if(sel&&!sel.contains(e.target)&&!trigger.contains(e.target))sel.classList.remove('ricerca-aperta');
-  }
-});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.selettore.ricerca-aperta').forEach(el=>el.classList.remove('ricerca-aperta'))});
+// Compatibilità con il vecchio pulsante titolo, non più visibile.
+function apriRicercaHeader(n){document.getElementById('auto'+n)?.focus()}
 </script>
 </body>
 </html>
