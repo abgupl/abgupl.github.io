@@ -37,7 +37,8 @@
         type="text"
         id="auto1"
         placeholder="Cerca auto..."
-        onfocus="pulisciSeVuoto(this)"
+        onfocus="apriListaDaCampo(this)"
+        onclick="apriListaDaCampo(this)"
         oninput="filtra('auto1','list1')"
         autocomplete="off"
       >
@@ -109,7 +110,8 @@
         type="text"
         id="auto2"
         placeholder="Cerca auto..."
-        onfocus="pulisciSeVuoto(this)"
+        onfocus="apriListaDaCampo(this)"
+        onclick="apriListaDaCampo(this)"
         oninput="filtra('auto2','list2')"
         autocomplete="off"
       >
@@ -3567,6 +3569,24 @@ s2.value = "";
 function pulisciSeVuoto(el){
   el.value = "";
 }
+
+function apriListaDaCampo(el) {
+  const colonna = el.id === "auto1" ? 1 : 2;
+  const listId = `list${colonna}`;
+  // Al clic/focus cancella il testo precedente e mostra tutte le auto.
+  el.value = "";
+  filtra(el.id, listId);
+}
+
+// Chiudi i suggerimenti quando si clicca fuori dai selettori.
+document.addEventListener("click", function(event) {
+  for (const colonna of [1, 2]) {
+    const selettore = document.getElementById(`auto${colonna}`)?.closest(".selettore");
+    if (selettore && !selettore.contains(event.target)) {
+      document.getElementById(`list${colonna}`).style.display = "none";
+    }
+  }
+});
 
 
 
