@@ -38,6 +38,7 @@
         id="auto1"
         placeholder="Cerca auto..."
         onfocus="apriListaDaCampo(this)"
+        onclick="apriListaDaCampo(this)"
         oninput="filtra('auto1','list1')"
         autocomplete="off"
       >
@@ -110,6 +111,7 @@
         id="auto2"
         placeholder="Cerca auto..."
         onfocus="apriListaDaCampo(this)"
+        onclick="apriListaDaCampo(this)"
         oninput="filtra('auto2','list2')"
         autocomplete="off"
       >
@@ -3571,8 +3573,8 @@ function pulisciSeVuoto(el){
 function apriListaDaCampo(el) {
   const colonna = el.id === "auto1" ? 1 : 2;
   const listId = `list${colonna}`;
-  // Apri la lista al focus, mostrando tutte le auto se il campo è vuoto,
-  // oppure i risultati corrispondenti al testo già presente.
+  // Al clic/focus cancella il testo precedente e mostra tutte le auto.
+  el.value = "";
   filtra(el.id, listId);
 }
 
