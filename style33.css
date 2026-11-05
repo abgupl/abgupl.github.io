@@ -875,6 +875,15 @@ li {
     width: 95%;
   }
 
+
+/* Mostra nuovamente barra e introduzione su smartphone */
+.barra-superiore,
+.introduzione-confronto {
+  display: flex;
+}
+
+
+
   .logo {
     width: 95%;
   }
