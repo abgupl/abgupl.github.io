@@ -16,69 +16,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
-<!-- Il nuovo tema è incorporato in questa pagina: non serve modificare style.css. -->
 <meta charset="UTF-8">
 <title>ABG UPL</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
-<style id="abg-modern-theme">
-:root{--abg-navy:#193b61;--abg-navy-deep:#102a47;--abg-red:#d40020;--abg-sky:#b0c4de;--abg-bg:#f2f5f9;--abg-ink:#182c43;--abg-border:#dce4ee}
-*{box-sizing:border-box}html,body{min-height:100%;margin:0}body{font-family:Montserrat,Arial,sans-serif;background:var(--abg-bg);color:var(--abg-ink);font-size:14px}
-.abg-topbar{height:78px;background:linear-gradient(105deg,#bf001a 0%,#d40020 48%,#a70017 49%,#a70017 51%,#fff 51.2%);display:flex;align-items:center;justify-content:space-between;padding:0 3%;box-shadow:0 3px 18px #142e4a16}
-.abg-brand{display:flex;align-items:center;gap:22px;color:#fff}.abg-brand strong{font-size:32px;font-weight:900;letter-spacing:-1.6px;font-style:italic}.abg-brand em{font-style:italic}.brand-divider{height:30px;width:1px;background:#ffffff88}.brand-sub{font-size:11px;letter-spacing:2px;font-weight:700}
-.abg-topright{display:flex;align-items:center;gap:24px}.workspace-label{font-weight:800;color:var(--abg-navy)}.top-languages{display:flex;gap:7px}.top-languages button{border:1px solid #d9e1eb;background:white;border-radius:9px;padding:6px 8px;cursor:pointer;box-shadow:none}.top-languages img{width:27px;height:19px;object-fit:cover;display:block;border-radius:2px}
-.abg-main{width:min(1640px,calc(100% - 48px));margin:22px auto}.abg-section-heading{display:flex;align-items:end;justify-content:space-between;margin:0 4px 17px}.abg-section-heading h1{font-size:25px;line-height:1.2;margin:4px 0 0;font-weight:800}.abg-section-heading p{margin:0 0 3px;color:#667a91;font-size:12px}.eyebrow{color:var(--abg-red);font-size:10px;letter-spacing:2px;font-weight:800}
-body .cards{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:22px!important;align-items:stretch!important;margin:0!important;width:100%!important;max-width:none!important;padding:0!important}
-body .cards>.card{width:100%!important;max-width:none!important;min-width:0!important;margin:0!important;padding:0!important;display:block!important;overflow:visible!important;border:1px solid #d9e2ec!important;border-radius:16px!important;background:white!important;box-shadow:0 8px 24px #173c6017!important;text-align:left!important}
-.card-header{height:50px;background:var(--abg-navy);color:white;border-radius:15px 15px 0 0;display:flex;align-items:center;justify-content:center;position:relative;padding:0 42px}.card-header-label{position:absolute;left:20px;font-size:10px;letter-spacing:1.1px;text-transform:uppercase;color:#c4d7e8;font-weight:700}.card-header-name{font-weight:800;font-size:16px;max-width:65%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.card-header-close{position:absolute;right:15px;background:transparent!important;border:0!important;color:#fff!important;font-size:26px!important;line-height:1!important;cursor:pointer;padding:4px 8px!important}
-.card-body{padding:16px 19px 18px}.card .selettore{position:relative!important;display:flex!important;align-items:center!important;width:100%!important;max-width:100%!important;margin:0 0 8px!important;padding:0!important;gap:0!important}.card .selettore input{height:39px!important;width:100%!important;min-width:0!important;padding:0 49px 0 15px!important;border:1px solid var(--abg-border)!important;border-radius:10px!important;background:#f9fbfd!important;color:var(--abg-ink)!important;font-family:inherit!important;font-size:13px!important}.card .selettore .lens{position:absolute!important;right:4px!important;top:4px!important;width:32px!important;height:31px!important;border:0!important;border-radius:7px!important;background:var(--abg-red)!important;color:#fff!important;font-size:23px!important;cursor:pointer;padding:0!important}.card .dropdown{position:absolute!important;top:40px!important;left:0!important;width:100%!important;max-height:270px!important;overflow:auto!important;z-index:100!important;background:#fff!important;border:1px solid var(--abg-border)!important;border-radius:10px!important;box-shadow:0 10px 22px #102a4726!important}.card .dropdown>div{padding:10px 13px!important;cursor:pointer!important}.card .dropdown>div:hover{background:#edf3fa!important}
-.card .img-box{height:230px!important;min-height:230px!important;max-height:230px!important;display:flex!important;justify-content:center!important;align-items:center!important;overflow:hidden!important;background:#fff!important;margin:0!important;padding:0!important}.card .img-box img{max-width:100%!important;max-height:100%!important;width:auto!important;height:auto!important;object-fit:contain!important;box-shadow:none!important;border:0!important}.card h2{margin:3px 0 9px!important;text-align:center!important;font-size:18px!important;font-style:normal!important;font-weight:800!important;color:var(--abg-navy)!important;border:0!important;padding:0!important}
-.card [id^="listino-box"],.card [id^="prezzo-box"]{text-align:center!important;margin:5px auto!important}.card [id^="prezzo-box"]{color:var(--abg-red)!important;font-weight:800!important}.card [id^="admin-panel"]{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;margin:10px 0 15px;padding:11px;background:#f5f8fc;border:1px solid #e4eaf2;border-radius:10px}.card [id^="admin-panel"][style*="display:none"],.card [id^="admin-panel"][style*="display: none"]{display:none!important}.card [id^="admin-panel"] input{width:135px!important;max-width:calc(50% - 12px);height:36px!important;border:1px solid #ccd8e6!important;border-radius:8px!important;padding:0 10px!important;background:white!important;font-size:12px!important}.card [id^="admin-panel"] button{height:36px!important;min-width:55px!important;border:0!important;border-radius:8px!important;background:var(--abg-red)!important;color:white!important;font-weight:800!important;cursor:pointer!important;padding:0 13px!important}.card [id^="admin-panel"] .btn-pulisci{background:#e1e7ee!important;color:#263b51!important}
-.detail-panel{margin-top:12px!important;border-radius:11px!important;overflow:hidden!important;border:1px solid #e4e9f0!important;background:#f4f7fb!important;box-shadow:none!important}.detail-panel h3{display:flex!important;align-items:center!important;min-height:39px!important;margin:0!important;padding:9px 14px!important;font-size:14px!important;font-weight:800!important;color:var(--abg-navy)!important;background:#e8eef6!important;border:0!important}.detail-panel h3:before{content:'▣';margin-right:10px;font-size:17px}.detail-panel.benefits{background:#fff6f7!important;border-color:#f2dfe4!important}.detail-panel.benefits h3{color:#a9001b!important;background:#fbe8ec!important}.detail-panel.benefits h3:before{content:'☆';font-size:22px}.detail-panel ul{margin:0!important;padding:11px 16px 12px 36px!important;list-style:none!important;text-align:left!important;min-height:100px!important}.detail-panel li{position:relative!important;margin:4px 0!important;padding:0!important;line-height:1.35!important;font-size:12.5px!important;color:#29394c!important;list-style:none!important}.detail-panel li:before{content:'✓';position:absolute;left:-19px;color:var(--abg-red);font-weight:900}
-.abg-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;background:white;border:1px solid var(--abg-border);border-radius:13px;margin-top:14px;padding:10px 18px;min-height:62px;box-shadow:0 4px 16px #173c600c}.abg-footer>span{font-size:11px;color:#708198}.abg-footer img{max-height:38px;max-width:200px;object-fit:contain}.abg-footer button{border:0;border-radius:9px;background:var(--abg-red);color:white;padding:11px 17px;font-family:inherit;font-weight:800;cursor:pointer}
-@media(max-width:900px){.abg-topbar{height:auto;min-height:70px;padding:12px 18px;background:var(--abg-red)}.abg-brand strong{font-size:23px}.brand-sub,.brand-divider,.workspace-label{display:none}.abg-main{width:calc(100% - 24px)}body .cards{grid-template-columns:1fr!important}.abg-section-heading p{display:none}.abg-footer>span{display:none}.card .img-box{height:220px!important;min-height:220px!important;max-height:220px!important}}
-@media(max-width:520px){.top-languages{gap:2px}.top-languages button{padding:4px}.top-languages img{width:21px;height:15px}.card-body{padding:12px}.card-header-label{display:none}.card .img-box{height:185px!important;min-height:185px!important;max-height:185px!important}.abg-footer img{max-width:120px}.abg-footer button{font-size:11px;padding:9px}}
-</style>
-<style>
-/* Selettore realmente incorporato nella barra blu, senza pannelli aggiuntivi. */
-.card{overflow:visible!important}
-.card-header{z-index:30!important;isolation:isolate}
-.card-header-name.car-select-trigger{display:none!important}
-.card-header .selettore{display:flex!important;position:relative!important;top:auto!important;left:auto!important;right:auto!important;width:min(65%,420px)!important;max-width:65%!important;margin:0!important;padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;z-index:35!important}
-.card-header .selettore input{display:block!important;width:100%!important;height:40px!important;padding:0 10px!important;background:transparent!important;border:1px solid transparent!important;border-radius:7px!important;color:#fff!important;text-align:center!important;font-weight:800!important;font-size:16px!important;box-shadow:none!important;outline:none!important;cursor:pointer!important;text-overflow:ellipsis!important}
-.card-header .selettore input::placeholder{color:#fff!important;opacity:1!important}
-.card-header .selettore input:focus{background:#ffffff16!important;border-color:#ffffff75!important;cursor:text!important}
-.card-header .selettore .lens{display:none!important}
-.card-header .dropdown{display:none;position:absolute!important;top:44px!important;left:0!important;width:100%!important;max-height:320px!important;overflow:auto!important;z-index:1000!important;background:white!important;border:1px solid #d7e1ee!important;border-radius:10px!important;box-shadow:0 12px 28px #102a4740!important;text-align:left!important;color:#193c60!important}
-.card-header .dropdown>div{padding:11px 13px!important;cursor:pointer!important}
-.card-header .dropdown>div:hover{background:#edf3fa!important}
-</style>
 </head>
 
 
 
 
 <body>
-<header class="abg-topbar">
-  <div class="abg-brand"><strong>ABG <em>UPL</em></strong><span class="brand-divider"></span><span class="brand-sub">CAR COMPARISON</span></div>
-  <div class="abg-topright"><span class="workspace-label">Confronto auto</span><div class="top-languages" aria-label="Seleziona lingua">
-    <button type="button" onclick="cambiaLingua('it')" title="Italiano"><img src="it.jpg" alt="IT"></button>
-    <button type="button" onclick="cambiaLingua('en')" title="English"><img src="uk.jpg" alt="EN"></button>
-    <button type="button" onclick="cambiaLingua('fr')" title="Français"><img src="fr.jpg" alt="FR"></button>
-    <button type="button" onclick="cambiaLingua('es')" title="Español"><img src="es.jpg" alt="ES"></button>
-  </div></div>
-</header>
-<main class="abg-main">
-<div class="abg-section-heading"><div><span class="eyebrow">ABG UPL · WORKSPACE</span><h1>Confronto vetture</h1></div><p>Seleziona due auto e confronta caratteristiche, vantaggi e prezzi.</p></div>
    
+
+<header class="barra-superiore">
+
+  <div class="marchio">
+    <span class="nome-marchio">ABG UPL</span>
+    <span class="descrizione-marchio">CAR COMPARISON</span>
+  </div>
+
+  <div class="strumenti-barra">
+   <span class="testo-confronto" id="seleziona-lingua">
+  Seleziona lingua
+</span>
+
+    <div class="bandiere" aria-label="Seleziona lingua">
+
+      <button type="button" onclick="cambiaLingua('it')" title="Italiano">
+        <img src="it.jpg" alt="Italiano">
+      </button>
+
+      <button type="button" onclick="cambiaLingua('en')" title="English">
+        <img src="uk.jpg" alt="English">
+      </button>
+
+      <button type="button" onclick="cambiaLingua('fr')" title="Français">
+        <img src="fr.jpg" alt="Français">
+      </button>
+
+      <button type="button" onclick="cambiaLingua('es')" title="Español">
+        <img src="es.jpg" alt="Español">
+      </button>
+
+    </div>
+  </div>
+
+</header>
+
+
+
+
+
+<section class="introduzione-confronto">
+
+  <div class="titolo-confronto">
+    <span class="etichetta-workspace">ABG UPL · WORKSPACE</span>
+    <h1>Confronto vetture</h1>
+  </div>
+
+  <p class="descrizione-confronto">
+    Seleziona due auto e confronta caratteristiche, vantaggi e prezzi.
+  </p>
+
+</section>
+
+
 
 
  <div class="cards">
 
   <div class="card">
-    <div class="card-header"><span class="card-header-label">Vettura 1</span><button type="button" class="card-header-name car-select-trigger" id="header-name1" onclick="apriRicercaHeader(1)" title="Clicca per scegliere una vettura">Seleziona auto</button><button class="card-header-close" type="button" onclick="resetAuto(1)" title="Rimuovi vettura">×</button></div>
-    <div class="card-body">
     <div class="selettore">
+
+
+<span class="etichetta-vettura" id="etichetta-vettura1">
+  Vettura 1
+</span>
 
       <input
         type="text"
@@ -131,30 +143,40 @@ body .cards>.card{width:100%!important;max-width:none!important;min-width:0!impo
       <button class="btn-pulisci" onclick="nascondiExtra(1)">Pulisci</button>
     </div>
 
-    <section class="detail-panel features"><h3>Caratteristiche</h3>
-    <ul>
-      <li id="c1a"></li>
-      <li id="c2a"></li>
-      <li id="c3a"></li>
-      <li id="c4a"></li>
-    </ul></section>
+<section class="info-auto caratteristiche">
+  <h3>Caratteristiche</h3>
 
-    <section class="detail-panel benefits"><h3>Vantaggi</h3>
-    <ul>
-      <li id="v1a"></li>
-      <li id="v2a"></li>
-      <li id="v3a"></li>
-      <li id="v4a"></li>
-    </ul></section>
+  <ul>
+    <li id="c1a"></li>
+    <li id="c2a"></li>
+    <li id="c3a"></li>
+    <li id="c4a"></li>
+  </ul>
+</section>
 
-  </div>
+<section class="info-auto vantaggi">
+  <h3>Vantaggi</h3>
+
+  <ul>
+    <li id="v1a"></li>
+    <li id="v2a"></li>
+    <li id="v3a"></li>
+    <li id="v4a"></li>
+  </ul>
+</section>
+
+
   </div>
 
 
   <div class="card">
-    <div class="card-header"><span class="card-header-label">Vettura 2</span><button type="button" class="card-header-name car-select-trigger" id="header-name2" onclick="apriRicercaHeader(2)" title="Clicca per scegliere una vettura">Seleziona auto</button><button class="card-header-close" type="button" onclick="resetAuto(2)" title="Rimuovi vettura">×</button></div>
-    <div class="card-body">
     <div class="selettore">
+
+
+<span class="etichetta-vettura" id="etichetta-vettura2">
+  Vettura 2
+</span>
+
 
       <input
         type="text"
@@ -207,23 +229,32 @@ body .cards>.card{width:100%!important;max-width:none!important;min-width:0!impo
       <button class="btn-pulisci" onclick="nascondiExtra(2)">Pulisci</button>
     </div>
 
-    <section class="detail-panel features"><h3 data-translate>Caratteristiche</h3>
-    <ul>
-      <li data-translate id="c1b"></li>
-      <li data-translate id="c2b"></li>
-      <li data-translate id="c3b"></li>
-      <li data-translate id="c4b"></li>
-    </ul></section>
 
-    <section class="detail-panel benefits"><h3 data-translate>Vantaggi</h3>
-    <ul>
-      <li data-translate id="v1b"></li>
-      <li data-translate id="v2b"></li>
-      <li data-translate id="v3b"></li>
-      <li data-translate id="v4b"></li>
-    </ul></section>
 
-  </div>
+<section class="info-auto caratteristiche">
+  <h3>Caratteristiche</h3>
+
+  <ul>
+    <li id="c1b"></li>
+    <li id="c2b"></li>
+    <li id="c3b"></li>
+    <li id="c4b"></li>
+  </ul>
+</section>
+
+<section class="info-auto vantaggi">
+  <h3>Vantaggi</h3>
+
+  <ul>
+    <li id="v1b"></li>
+    <li id="v2b"></li>
+    <li id="v3b"></li>
+    <li id="v4b"></li>
+  </ul>
+</section>
+
+
+
   </div>
 
 </div>
@@ -3976,12 +4007,68 @@ function apriModuliVuoti(colonna){
 }
 
 
-function cambiaLingua(lang){
 
+
+
+
+function cambiaLingua(lang) {
   lingua = lang;
 
+
+const testiSelezioneLingua = {
+  it: "Seleziona lingua",
+  en: "Select language",
+  fr: "Choisir la langue",
+  es: "Seleccionar idioma"
+};
+
+const etichettaLingua = document.getElementById("seleziona-lingua");
+
+if (etichettaLingua) {
+  etichettaLingua.textContent =
+    testiSelezioneLingua[lang] || testiSelezioneLingua.it;
+}
+
+
+  const traduzioni = {
+    it: ["Caratteristiche", "Vantaggi", "Vettura"],
+    en: ["Features", "Benefits", "Vehicle"],
+    fr: ["Caractéristiques", "Avantages", "Véhicule"],
+    es: ["Características", "Ventajas", "Vehículo"]
+  };
+
+  const testi = traduzioni[lang] || traduzioni.it;
+
+  /* Titoli Caratteristiche in entrambe le colonne */
+  document.querySelectorAll(".caratteristiche h3").forEach(function(elemento) {
+    elemento.textContent = testi[0];
+  });
+
+  /* Titoli Vantaggi in entrambe le colonne */
+  document.querySelectorAll(".vantaggi h3").forEach(function(elemento) {
+    elemento.textContent = testi[1];
+  });
+
+  /* Etichette Vettura 1 e Vettura 2 */
+  for (let numero = 1; numero <= 2; numero++) {
+    const etichetta = document.getElementById(
+      "etichetta-vettura" + numero
+    );
+
+    if (etichetta) {
+      etichetta.textContent = testi[2] + " " + numero;
+    }
+  }
+
+  /* Aggiorna i dati delle auto */
   aggiorna();
 }
+
+
+
+
+
+
 
 // Reset completo delle auto ad ogni caricamento/refresh (F5).
 // Il listener pageshow viene eseguito anche dopo l'eventuale ripristino
@@ -4002,6 +4089,8 @@ function resetAutoDopoRefresh() {
   // Entrambi devono partire con la lente
   aggiornaPulsantiSelettore();
 }
+
+window.addEventListener("pageshow", resetAutoDopoRefresh);
 
 window.addEventListener("pageshow", resetAutoDopoRefresh);
       
@@ -4052,7 +4141,7 @@ function resetAuto(colonna) {
 
   // Svuota caratteristiche
   ["c1", "c2", "c3", "c4", "v1", "v2", "v3", "v4"].forEach(id => {
-    document.getElementById(`${id}${suffisso}`).innerText = "";
+    document.getElementById(`${id}${suffisso}`).innerText = "-";
   });
 
   // Nasconde prezzi
@@ -4072,47 +4161,36 @@ function resetAuto(colonna) {
 
 
 
+function aggiornaEtichetteVetture(linguaSelezionata) {
+  const traduzioni = {
+    it: "Vettura",
+    en: "Vehicle",
+    fr: "Véhicule",
+    es: "Vehículo"
+  };
+
+  const testo = traduzioni[linguaSelezionata] || traduzioni.it;
+
+  document.getElementById("etichetta-vettura1").textContent =
+    testo + " 1";
+
+  document.getElementById("etichetta-vettura2").textContent =
+    testo + " 2";
+}
+
+
+
+
+
 </script>
 
 
-<footer class="abg-footer"><span>ABG UPL · Vehicle comparison</span><img src="foto auto/logo.jpg" alt="Avis Budget Group"><button type="button" onclick="resetAuto(1);resetAuto(2)">↻ &nbsp;Nuovo confronto</button></footer>
-</main>
-<script>
-// Aggiorna le intestazioni senza modificare la logica di ricerca e prezzi.
-const updateHeaderNames = () => {
-  for (const i of [1, 2]) {
-    const value = document.getElementById(`auto${i}`).value;
-    document.getElementById(`header-name${i}`).textContent = (typeof auto !== 'undefined' && auto[value]) ? value : 'Seleziona auto';
-  }
-};
-const originalAggiorna = aggiorna;
-aggiorna = function(...args) { const result = originalAggiorna.apply(this,args); updateHeaderNames(); return result; };
-for (const i of [1,2]) {
-  document.getElementById(`auto${i}`).addEventListener('input', updateHeaderNames);
-}
-updateHeaderNames();
-</script>
-<script>
-// Sposta i campi di ricerca ORIGINALI dentro le rispettive intestazioni blu.
-// Mantiene intatti gli ID e le funzioni del vecchio sito (filtra, renderLista, aggiorna).
-for(const n of [1,2]){
-  const card=document.getElementById('auto'+n)?.closest('.card');
-  const header=card?.querySelector('.card-header');
-  const selector=card?.querySelector('.selettore');
-  const input=document.getElementById('auto'+n);
-  if(!header||!selector||!input)continue;
-  header.insertBefore(selector,header.querySelector('.card-header-close'));
-  input.setAttribute('aria-label','Cerca o seleziona vettura '+n);
-  input.placeholder='Seleziona auto';
-  // Selezionata un'auto, il nome compare direttamente nel campo blu.
-  input.addEventListener('blur',()=>{
-    if(!input.value && window['ultimaAuto'+n] && window['ultimaAuto'+n]!=='__reset__'){
-      // Non ripristinare valori durante il reset: aggiorna() resta la fonte dei dati.
-    }
-  });
-}
-// Compatibilità con il vecchio pulsante titolo, non più visibile.
-function apriRicercaHeader(n){document.getElementById('auto'+n)?.focus()}
-</script>
+<div class="logo">
+
+
+
+  <img src="foto auto/logo.jpg" alt="Logo">
+</div> 
+
 </body>
 </html>
