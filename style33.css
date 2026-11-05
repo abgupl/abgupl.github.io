@@ -820,7 +820,11 @@ li {
   .cards {
     width: 98%;
   }
-
+/* Nasconde barra superiore e introduzione */
+.barra-superiore,
+.introduzione-confronto {
+  display: none;
+}
   .logo {
     width: 98%;
   }
