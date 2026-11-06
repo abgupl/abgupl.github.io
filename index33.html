@@ -95,7 +95,7 @@
       <input
         type="text"
         id="auto1"
-        placeholder="Cerca auto..."
+        placeholder="Seleziona auto..."
         onfocus="apriListaDaCampo(this)"
         onclick="apriListaDaCampo(this)"
         oninput="filtra('auto1','list1')"
@@ -182,7 +182,7 @@
       <input
         type="text"
         id="auto2"
-        placeholder="Cerca auto..."
+        placeholder="Seleziona auto..."
         onfocus="apriListaDaCampo(this)"
         onclick="apriListaDaCampo(this)"
         oninput="filtra('auto2','list2')"
@@ -4016,6 +4016,47 @@ function cambiaLingua(lang) {
   lingua = lang;
 
 
+ const testiIntroduzione = {
+    it: {
+      titolo: "Confronta le auto",
+      descrizione: "Seleziona due auto e confronta caratteristiche, vantaggi e prezzi.",
+      seleziona: "Seleziona auto..."
+    },
+    en: {
+      titolo: "Compare cars",
+      descrizione: "Select two cars and compare features, benefits and prices.",
+      seleziona: "Select a car..."
+    },
+    fr: {
+      titolo: "Comparez les voitures",
+      descrizione: "Sélectionnez deux voitures et comparez leurs caractéristiques, avantages et prix.",
+      seleziona: "Sélectionnez une voiture..."
+    },
+    es: {
+      titolo: "Compara los coches",
+      descrizione: "Selecciona dos coches y compara características, ventajas y precios.",
+      seleziona: "Selecciona un coche..."
+    }
+  };
+
+  const introduzione = testiIntroduzione[lang] || testiIntroduzione.it;
+
+  document.documentElement.lang = lang;
+
+  document.querySelector(".titolo-confronto h1").textContent =
+    introduzione.titolo;
+
+  document.querySelector(".descrizione-confronto").textContent =
+    introduzione.descrizione;
+
+  document.getElementById("auto1").placeholder =
+    introduzione.seleziona;
+
+  document.getElementById("auto2").placeholder =
+    introduzione.seleziona;
+
+
+
 const testiSelezioneLingua = {
   it: "Seleziona lingua",
   en: "Select language",
@@ -4187,11 +4228,12 @@ function aggiornaEtichetteVetture(linguaSelezionata) {
 
 
 <div class="logo">
-
-
-
   <img src="foto auto/logo.jpg" alt="Logo">
-</div> 
+
+  <span class="firma">
+    Design &amp; sviluppo · Teodoro Lapertosa
+  </span>
+</div>
 
 </body>
 </html>
