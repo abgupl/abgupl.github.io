@@ -164,7 +164,7 @@ font-weight:700;
   gap: 1rem;
   width: 80%;
   box-sizing: border-box;
-  margin: 1.5rem auto 1rem;
+  margin: 1.2rem auto 1rem;						 
   text-align: left;
 }
 
@@ -189,7 +189,7 @@ text-align:center;
 .titolo-confronto h1 {
   margin: 0;
   color: #193b61;
-  font-size: clamp(1.25rem, 1.8vw, 1.75rem);
+font-size: clamp(1rem, 1.4vw, 1.3rem);
   font-weight: 700;
   line-height: 1.2;
 
@@ -445,30 +445,7 @@ color: #193b61;
   object-fit: cover;
 }
 
-/* Contenitore in fondo: bordo e ombra come le card */
-.logo {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  margin: 0.0625rem auto 0.75rem;
-  padding: 0.5rem;
-  background: white;
-  border: 0.0625rem solid #e0e7f0;
-  border-radius: 0.625rem;
-  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1);
-}
 
-/* Logo piccolo e centrato */
-.logo img {
-  display: block;
-  width: 7rem;
-  max-width: 60%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-}
 
 h1 {
   margin: 20px;
@@ -480,8 +457,8 @@ h1 {
   margin: 0 auto;
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
-  margin-bottom: 0.2%;
+  justify-content: center; 
+  margin-bottom: 0.3%;
   margin-top: 0.8%;
   gap: clamp(2px, 2vw, 4px);
 }
@@ -641,7 +618,7 @@ font-size: 0.95rem;
 
 .lens:hover {
   border-radius: 5px;
-  background-color: lightsteelblue;
+  background-color: #2c5282;
 }
 
 .selettore input::placeholder {
@@ -842,6 +819,59 @@ li {
   font-size: clamp(12px, 1vw, 16px);
 }
 
+
+
+
+/* Contenitore in fondo: bordo e ombra come le card */
+.logo {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0.0625rem auto 0.75rem;				position:relative;	
+  padding: 1.0rem;
+  background: white;
+  border: 0.0625rem solid #e0e7f0;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1);
+}
+
+/* Logo piccolo e centrato */
+.logo img {
+  display: block;
+  width: 15rem;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+
+
+
+.firma {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.5rem;
+  font-weight: 400;
+  color: #b5b5b5;
+  text-align: center;
+}
+
+
+.logo .firma {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.35rem;
+  margin: 0;
+  font-size: 0.5rem;
+  color: #b5b5b5;
+  text-align: right;
+}
+
+
 @media (max-width: 1068px) {
   .cards {
     width: 98%;
@@ -882,12 +912,27 @@ li {
   }
 
 
+
+.introduzione-confronto {
+
+  margin: 0.5rem auto;						 
+  
+}
+
+
+
+
 /* Mostra nuovamente barra e introduzione su smartphone */
 .barra-superiore,
 .introduzione-confronto {
   display: flex;
 }
 
+
+
+ .descrizione-confronto {
+    display: none;
+  }
 
 
   .logo {
@@ -900,6 +945,6 @@ li {
   }
 
   .logo img {
-    width: 50%;
+    width: 35%;
   }
 }
