@@ -291,6 +291,7 @@ color: #193b61;
   border-radius: 0.75rem;
   background: #f5f8fc;
   text-align: center;
+  display: none;
 }
 
 
@@ -311,7 +312,7 @@ color: #193b61;
   font-family: inherit;
   font-size: 0.8125rem;
   vertical-align: middle;
-  display: none;
+
 }
 
 
