@@ -51,7 +51,7 @@ background: linear-gradient(
   inset: 0;
   z-index: -1;
   background: linear-gradient(110deg, #bf001a, #d40020);
-  clip-path: polygon(0 0, 52% 0, 51% 100%, 0 100%);
+  clip-path: polygon(0 0, 51% 0, 49% 100%, 0 100%);
 }
 
 /* Marchio a sinistra */
@@ -951,8 +951,9 @@ li {
     width: 95%;
   }
 
-
-
+  .barra-superiore::before {
+    clip-path: polygon(0 0, 45% 0,40% 100%, 0 100%);
+  }
 .introduzione-confronto {
 
   margin: 0.5rem auto;						 
