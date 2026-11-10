@@ -3861,8 +3861,7 @@ function gestisciPannelloPrezzi(colonna, autoSelezionata, ultimaAuto) {
   const autoValida = autoSelezionata &&
     autoSelezionata !== "Seleziona Auto" && auto[autoSelezionata];
 
-  document.getElementById(`admin-panel${colonna}`).style.display =
-    autoValida ? "block" : "none";
+document.getElementById(`admin-panel${colonna}`).style.display = "none";
 }
 
 
